@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ChoiceHandlerCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK1-ZQ-SSj" userLabel="FoldBtn">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="1mQ-lT-iJu"/>
+                            <constraint firstAttribute="width" secondItem="RK1-ZQ-SSj" secondAttribute="height" multiplier="1:1" id="MLs-X7-zby"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="my_work_1">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected" backgroundImage="my_work_3">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulj-pe-ko8" userLabel="title">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNa-VI-mYy" userLabel="checkbox">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="DNa-VI-mYy" secondAttribute="height" multiplier="1:1" id="DBV-EZ-x1X"/>
+                            <constraint firstAttribute="width" constant="30" id="X3Z-Co-z7M"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="my_work_4">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected" backgroundImage="my_work_2"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oG-S7-kbF" userLabel="Line">
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="eKC-DV-t6P"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="8oG-S7-kbF" secondAttribute="trailing" id="1AY-8r-ZiK"/>
+                    <constraint firstItem="ulj-pe-ko8" firstAttribute="leading" secondItem="RK1-ZQ-SSj" secondAttribute="trailing" id="3DI-mX-8NG"/>
+                    <constraint firstItem="8oG-S7-kbF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Etr-iA-0AN"/>
+                    <constraint firstItem="DNa-VI-mYy" firstAttribute="leading" secondItem="ulj-pe-ko8" secondAttribute="trailing" id="L5q-Qg-CvV"/>
+                    <constraint firstItem="RK1-ZQ-SSj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lbj-1C-UsA"/>
+                    <constraint firstAttribute="trailing" secondItem="DNa-VI-mYy" secondAttribute="trailing" constant="8" id="OFJ-Jt-J6w"/>
+                    <constraint firstItem="RK1-ZQ-SSj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="e6h-0D-D3N"/>
+                    <constraint firstItem="ulj-pe-ko8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fN3-f4-wKN"/>
+                    <constraint firstItem="DNa-VI-mYy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fgg-Nj-hid"/>
+                    <constraint firstAttribute="bottom" secondItem="8oG-S7-kbF" secondAttribute="bottom" id="lEQ-Jq-A5G"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkBoxBtn" destination="DNa-VI-mYy" id="xJo-PD-nYS"/>
+                <outlet property="checkBoxLeftConstraint" destination="OFJ-Jt-J6w" id="oah-oC-4j7"/>
+                <outlet property="foldBtn" destination="RK1-ZQ-SSj" id="fJR-4N-TeR"/>
+                <outlet property="handlerNameLabel" destination="ulj-pe-ko8" id="etb-0w-fVB"/>
+            </connections>
+            <point key="canvasLocation" x="137" y="262"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="my_work_1" width="40" height="38"/>
+        <image name="my_work_2" width="40" height="40"/>
+        <image name="my_work_3" width="40" height="40"/>
+        <image name="my_work_4" width="40" height="40"/>
+    </resources>
+</document>

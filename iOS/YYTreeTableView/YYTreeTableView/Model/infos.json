@@ -1,0 +1,130 @@
+{
+    "info": [
+             {
+             "org_id": "33000000",
+             "org_name": "中国大帝国蓝星人公司",
+             "org_level": "1",
+             "parent_org_id": "0",
+             "short_name": "",
+             "display_id": "0",
+             "is_end": "1"
+             },
+             {
+             "org_id": "33520000",
+             "org_name": "蓝星人综合部",
+             "org_level": "2",
+             "parent_org_id": "33000000",
+             "short_name": "",
+             "display_id": "100",
+             "is_end": "1"
+             },
+             {
+             "org_id": "33520100",
+             "org_name": "蓝星人综合部文秘档案室",
+             "org_level": "3",
+             "parent_org_id": "33520000",
+             "short_name": "",
+             "display_id": "21",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33520300",
+             "org_name": "蓝星人综合部档案室",
+             "org_level": "3",
+             "parent_org_id": "33520000",
+             "short_name": "",
+             "display_id": "22",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33520800",
+             "org_name": "蓝星人综合部公关资讯室",
+             "org_level": "3",
+             "parent_org_id": "33520000",
+             "short_name": "",
+             "display_id": "23",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33540000",
+             "org_name": "蓝星人财务部",
+             "org_level": "2",
+             "parent_org_id": "33000000",
+             "short_name": "",
+             "display_id": "120",
+             "is_end": "1"
+             },
+             {
+             "org_id": "33540200",
+             "org_name": "蓝星人财务部会计核算室",
+             "org_level": "3",
+             "parent_org_id": "33540000",
+             "short_name": "",
+             "display_id": "41",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33540300",
+             "org_name": "蓝星人财务部资产管理室",
+             "org_level": "3",
+             "parent_org_id": "33540000",
+             "short_name": "",
+             "display_id": "43",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33540100",
+             "org_name": "蓝星人财务部财务管理室",
+             "org_level": "3",
+             "parent_org_id": "33540000",
+             "short_name": "",
+             "display_id": "45",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33540400",
+             "org_name": "蓝星人财务部内控管理室",
+             "org_level": "3",
+             "parent_org_id": "33540000",
+             "short_name": "",
+             "display_id": "50",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33540500",
+             "org_name": "蓝星人财务部财务核算中心",
+             "org_level": "3",
+             "parent_org_id": "33540000",
+             "short_name": "",
+             "display_id": "55",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33540800",
+             "org_name": "蓝星人财务部成本核算室",
+             "org_level": "3",
+             "parent_org_id": "33540000",
+             "short_name": "",
+             "display_id": "152",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33540600",
+             "org_name": "蓝星人财务部核算管理室",
+             "org_level": "3",
+             "parent_org_id": "33540000",
+             "short_name": "",
+             "display_id": "231",
+             "is_end": "0"
+             },
+             {
+             "org_id": "33540700",
+             "org_name": "蓝星人财务部综合核算室",
+             "org_level": "3",
+             "parent_org_id": "33540000",
+             "short_name": "",
+             "display_id": "327",
+             "is_end": "0"
+             }
+             ]
+}
