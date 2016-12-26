@@ -12,12 +12,14 @@
 
 
 @interface ViewController ()<ThreeTableViewDelegate>
-
+/**
+ 树形Tableview
+ */
 @property (strong, nonatomic)TreeTableView *myTableView;
 
-
-@property(nonatomic,assign)NSUInteger selectedRow;//选中的行
-
+/**
+用于保存模拟接口返回原始数据的实体模型
+ */
 @property(nonatomic,strong)NSMutableArray<OrginalModel*> *orginalModels;
 
 @end
@@ -59,7 +61,6 @@
 
 //点击 checkBox
 -(void)threeTableView:(TreeTableView *)tableView checkBoxClickedWithParentNode:(Node *)node atIndexPath:(NSIndexPath *)indexPath{
-    
     
 }
 

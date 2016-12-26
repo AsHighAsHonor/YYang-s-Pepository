@@ -67,8 +67,11 @@ static NSString *const reuseableId = @"ChoiceHandlerCell";
     cell.indentationWidth = 20.f;
     cell.handlerNameLabel.text =node.name;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.checkBoxLeftConstraint.constant = (node.depth.intValue - 1)*cell.indentationWidth +10;//10 it's improtant to indentation
+    cell.checkBoxLeftConstraint.constant = (node.depth.intValue - 1)*cell.indentationWidth +10;
+    //10 it's improtant to indentation
     cell.checkBoxBtn.tag = indexPath.row;
+    cell.checkBoxBtn.selected = node.isChecked;
+    
     if([node.isEnd isEqualToString:@"0"]){
         cell.foldBtn.hidden = YES;
         cell.checkBoxBtn.hidden = NO;
@@ -76,10 +79,14 @@ static NSString *const reuseableId = @"ChoiceHandlerCell";
         cell.checkBoxBtn.hidden = NO;
         cell.foldBtn.hidden = NO;
     }
-    [cell.checkBoxBtn addTarget:self action:@selector(CheckBoxClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     /**
-     *  @author MonW
+     添加右侧 checkBox 选中取消事件
+     */
+    [cell.checkBoxBtn addTarget:self action:@selector(checkBoxClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    /**
      *
      *  添加折叠按钮事件
      *
@@ -97,28 +104,30 @@ static NSString *const reuseableId = @"ChoiceHandlerCell";
     
     //获取到 点击的这个 node
     self.selectedNode = [self.nodeArray objectAtIndex:indexPath.row];
-    [self modifyOriginalDataAtIndexPath:indexPath];
-
-    if ([self.myDelegate respondsToSelector:@selector(threeTableView:didSelectRowAtIndexPath:WithParentNode:)]){
-        [self.myDelegate threeTableView:self didSelectRowAtIndexPath:indexPath WithParentNode:self.selectedNode];
-    }
+    [self modifyOriginalData];
 
     self.lastContentOffset = self.contentOffset;
     
-    //这里选上checkBox前先判断非隐藏的才能选
-    ChoiceHandlerCell *choiceCell=[tableView cellForRowAtIndexPath:indexPath];
-    if (!choiceCell.checkBoxBtn.hidden) {
-        [self CheckBoxClicked:choiceCell.checkBoxBtn];
-    }
+//    //这里选上checkBox前先判断非隐藏的才能选
+//    ChoiceHandlerCell *choiceCell=[tableView cellForRowAtIndexPath:indexPath];
+//    if (!choiceCell.checkBoxBtn.hidden) {
+//        [self checkBoxClicked:choiceCell.checkBoxBtn];
+//    }
+//    
+    //代理方法
+    //    if ([self.myDelegate respondsToSelector:@selector(threeTableView:didSelectRowAtIndexPath:WithParentNode:)]){
+    //        [self.myDelegate threeTableView:self didSelectRowAtIndexPath:indexPath WithParentNode:self.selectedNode];
+    //    }
 }
 
+
 #pragma mark - ResopnseEvents
-- (void)CheckBoxClicked:(UIButton *)checkBox{
-//    Node *parentNode = [self.nodeArray objectAtIndex:checkBox.tag];
-//
+- (void)checkBoxClicked:(UIButton *)checkBox{
+    self.selectedNode = [self.nodeArray objectAtIndex:checkBox.tag];
+    [self checkBoxModifyOriginalData];
+    //代理方法
 //    if([self.myDelegate respondsToSelector:@selector(threeTableView:checkBoxClickedWithParentNode:atIndexPath:)]){
-//        [self.myDelegate threeTableView:self checkBoxClickedWithParentNode:parentNode atIndexPath:[NSIndexPath indexPathForRow:checkBox.tag inSection:0]];
-//
+//        [self.myDelegate threeTableView:self checkBoxClickedWithParentNode:self.selectedNode atIndexPath:[NSIndexPath indexPathForRow:checkBox.tag inSection:0]];
 //    }
 }
 
@@ -177,7 +186,10 @@ static NSString *const reuseableId = @"ChoiceHandlerCell";
 
 
 
--(void)modifyOriginalDataAtIndexPath:(NSIndexPath *)indexPath{
+/**
+ 折叠隐藏控制
+ */
+-(void)modifyOriginalData{
     
     __block NSInteger vernier;    //游标 用于标示 子节点/孙子节点的范围....
     [self.originDatas enumerateObjectsUsingBlock:^(OrginalModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -191,18 +203,19 @@ static NSString *const reuseableId = @"ChoiceHandlerCell";
             //2.在遍历时保证是该节点下的孙子节点.....  当前节点深度<遍历节点深度
             //隐藏
             obj.display = NO; //所有子节点孙子节点 显示状态置为 NO
-            obj.isExpand = NO; //所有子节点孙子节点 展开状态置为 NO
+            obj.expand = NO; //所有子节点孙子节点 展开状态置为 NO
             vernier++;
         } else if(!self.selectedNode.isExpand && [obj.parent_org_id isEqualToString:self.selectedNode.nodeId]){
             //显示
             obj.display = YES;
         }
         
+        //设置当前节点的展开状态
         if ([obj.org_id isEqualToString:self.selectedNode.nodeId]) {
-            obj.isExpand = !obj.isExpand;  //将当前节点的展开状态置为 NO
+            obj.expand = !obj.isExpand;
         }
         
-    
+        //遍历完成后刷新数据源
         if (idx == self.originDatas.count-1) {
             [self generateDataWithData:self.originDatas];
         }
@@ -211,9 +224,24 @@ static NSString *const reuseableId = @"ChoiceHandlerCell";
 }
 
 
+/**
+ CheckBox 控制选中状态
+ */
+-(void)checkBoxModifyOriginalData{
+    [self.originDatas enumerateObjectsUsingBlock:^(OrginalModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        if ([self.selectedNode.nodeId isEqualToString:obj.org_id]) {
+            obj.checked = !obj.isChecked;
+            *stop = YES;
+            [self generateDataWithData:self.originDatas];
+        }
+        
+    }];
+
+}
 
 
-#pragma mark -Getters and Setters
+#pragma mark - Getters and Setters
 -(NSMutableArray *)originDatas
 {
     if(!_originDatas)

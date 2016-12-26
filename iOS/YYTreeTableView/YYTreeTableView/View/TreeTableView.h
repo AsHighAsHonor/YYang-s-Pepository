@@ -15,8 +15,8 @@
 
 @protocol ThreeTableViewDelegate <NSObject>
 
+@optional
 /**
- *  @author YYang, 16-06-06 22:06:51
  *
  *  点击 cell 的代理
  *
@@ -27,7 +27,6 @@
 - (void)threeTableView:( TreeTableView*)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath WithParentNode:(Node *)node;
 
 /**
- *  @author YYang, 16-06-06 22:06:14
  *
  *  点击了 cell 上的 checkBox
  *
@@ -46,7 +45,6 @@
  *  @param indexPath  indexPath
  *  @param parentNode 点击的那个节点
  */
-@optional
 - (void)threeTableView:(TreeTableView *)tableView foldBtnClickedAtIndexPath:(NSIndexPath *)indexPath parentNode:(Node *)parentNode;
 
 @end
@@ -59,7 +57,6 @@
  */
 @property(nonatomic,strong)NSMutableArray<OrginalModel*> * originDatas;
 /**
- *  @author YYang, 16-06-07 15:06:33
  *
  *  生成新的树节点数据
  *
@@ -68,4 +65,5 @@
 -(void)generateDataWithData:(NSMutableArray *)data ;
 
 -(instancetype)initWithDataSource:(NSMutableArray *)dataSource;
+
 @end

@@ -161,8 +161,8 @@
 		FD52B6E91E0B6BDC004B4555 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FD52B7061E0BB41C004B4555 /* OrginalModel.m */,
 				FD52B7071E0BB41C004B4555 /* OrginalModel.h */,
+				FD52B7061E0BB41C004B4555 /* OrginalModel.m */,
 				FD52B7011E0B7D2A004B4555 /* infos.json */,
 				FD52B6EA1E0B6BDC004B4555 /* Node.h */,
 				FD52B6EB1E0B6BDC004B4555 /* Node.m */,

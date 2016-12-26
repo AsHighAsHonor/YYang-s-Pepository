@@ -23,11 +23,11 @@
 
 @property (nonatomic, copy) NSString *parent_org_id;
 
-@property (nonatomic , assign) BOOL isExpand;//该节点是否处于展开状态
+@property (nonatomic , assign,getter=isExpand) BOOL expand;//该节点是否处于展开状态
 
-@property (nonatomic , assign) BOOL display;//该节点是否展示
+@property (nonatomic , assign,getter=isDisplay) BOOL display;//该节点是否展示
 
-@property(nonatomic,assign,)BOOL isChecked;//该节点的checkbox 状态
+@property(nonatomic,assign,getter=isChecked)BOOL checked;//该节点的checkbox 状态
 
 
 @end

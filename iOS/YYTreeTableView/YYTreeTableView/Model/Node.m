@@ -9,7 +9,7 @@
 #import "Node.h"
 
 @implementation Node
-- (instancetype)initWithParentId : (NSString *)parentId nodeId : (NSString*)nodeId name : (NSString *)name depth : (NSString*)depth expand : (BOOL)expand andCheckStatus:(CheckStatus)checkStatus andIsEnd:(NSString *)isEnd
+- (instancetype)initWithParentId : (NSString *)parentId nodeId : (NSString*)nodeId name : (NSString *)name depth : (NSString*)depth expand : (BOOL)expand andCheckStatus:(BOOL)checkStatus andIsEnd:(NSString *)isEnd
 {
     self = [super init];
     if(self)
@@ -18,16 +18,13 @@
         self.nodeId = nodeId;
         self.name = name;
         self.depth = depth;
-        self.isExpand = expand;
-        self.checkStatus = checkStatus;
+        self.expand = expand;
         self.isEnd = isEnd;
-        self.isSelected = NO;
+        self.checked = checkStatus;
+    
     }
     return self;
 }
-//改。。
-- (void)setIsExpand:(BOOL)isExpand{
-    _isExpand = isExpand;
-}
+
 
 @end
