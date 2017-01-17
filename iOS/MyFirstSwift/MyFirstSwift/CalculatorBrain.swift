@@ -39,8 +39,11 @@ class CalculatorBrain{
         "AC":MathematicalOperations.constant(0.0),
         "√": .unaryOperation(sqrt), //省略枚举类型写法
         "cos":MathematicalOperations.unaryOperation(cos), //使用枚举时需要传入枚举关联类型的值
+        "+-":MathematicalOperations.unaryOperation({ (operand) -> (Double) in
+            return -operand
+        }),
         "%":MathematicalOperations.unaryOperation({ (operand) -> (Double) in
-            return accumulator * 0.01
+            return operand * 0.01
         }),
         "=":MathematicalOperations.equales, //使用枚举时需要传入枚举关联类型的值
         "+":MathematicalOperations.binaryOperation({ (operand1, operand2) -> (Double) in
@@ -77,7 +80,7 @@ class CalculatorBrain{
             switch operation {
             case .constant(let associatedValue):   //使用 let 获取到传入时关联的值
                 accumulator = associatedValue
-                pending = nil;
+                
                 
             case .unaryOperation(let unaryFunc):
                 accumulator = unaryFunc(accumulator)
