@@ -15,7 +15,7 @@
 
 -------
 ##Demo 介绍
-![2017-01-18 at 00.43](media/14846681240883/2017-01-18%20at%2000.43.gif)
+![2017-01-18 at 00.43](https://github.com/AsHighAsHonor/YYangs-Pepository/blob/master/Image/2017-01-18%20at%2000.43.gif)
 >先介绍一下demo,新建的 swift 工程 , 在教程的基础上仿照系统的计算器实现了简单的四则运算 ,点击数字键盘选择运算操作,键盘上方的区域显示计算结果,代码基本上和教程里相同 ; UI 使用 storyboard 通过StackView + autolayout 布局 . 
 >
 * `CalculatorBrain.swift` model 层 包含计算器所有的计算逻辑对外提供接口:
