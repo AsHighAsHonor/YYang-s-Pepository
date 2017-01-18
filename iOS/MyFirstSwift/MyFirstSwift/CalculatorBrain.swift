@@ -63,7 +63,7 @@ class CalculatorBrain{
     
 
     
-    ///计算属性用于获取输入的值 / 计算返回的值
+    ///计算属性用于获取输入的值
     func setOperand(operand :String) -> (){
             accumulator = Double(operand)!
     }
