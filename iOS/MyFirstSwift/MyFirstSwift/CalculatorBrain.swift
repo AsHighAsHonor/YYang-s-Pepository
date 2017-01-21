@@ -63,15 +63,7 @@ class CalculatorBrain{
     
 
     
-    ///计算属性用于获取输入的值
-    func setOperand(operand :String) -> (){
-            accumulator = Double(operand)!
-    }
-    
-    var result : String{
-        return "\(accumulator)"
-    }
-    
+   
 
     /// 点击数学符号的操作
     /// - Parameter operand: 点击的符号
@@ -86,18 +78,38 @@ class CalculatorBrain{
                 accumulator = unaryFunc(accumulator)
                 
             case .binaryOperation(let binaryFunc)://二元运算
+                //连续的二元运算先保存上次运算结果到PendingOperationInfo.firstOperand
+                if pending != nil {
+                    execuateOperation()
+                }
                 pending = PendingOperationInfo.init(firstOperand: accumulator, binaryFunction: binaryFunc) //初始化结构体
                 
+                
             case .equales://相等
-                if let p  = pending {//可选类型解包
-                    accumulator = p.binaryFunction(p.firstOperand ,accumulator)
-                    pending = nil;
-                }
+                execuateOperation()
             default:
                 break;
             }
         }
 
+    }
+    
+    ///计算属性用于获取输入的值
+    func setOperand(operand :String) -> (){
+        accumulator = Double(operand)!
+    }
+    
+    var result : String{
+        return "\(accumulator)"
+    }
+    
+    
+    func execuateOperation() -> () {
+        if let p  = pending {//可选类型解包
+            accumulator = p.binaryFunction(p.firstOperand ,accumulator)
+            pending = nil
+        }
+        
     }
     
 
