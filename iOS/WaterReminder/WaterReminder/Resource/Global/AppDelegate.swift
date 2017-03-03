@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         notificationHandler.dailyCheck() //检测每日水量
         IQKeyboardManager.sharedManager().enable = true  //开启键盘自适应
         // TODO: 重置颜色
-        ThemeServiceConfig.shared.initTheme(data: ThemeStyle.day) //设置整个 app 的 theme
+//        ThemeServiceConfig.shared.initTheme(data: ThemeStyle.day) //设置整个 app 的 theme
 
         
         return true

@@ -1097,7 +1097,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "2ba2f4f6-7646-4fd4-a8b4-2e40122dae8c";
 				PROVISIONING_PROFILE_SPECIFIER = GZreminderPP;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/YYang/Documents/IOS/WaterReminder/WaterReminder/Resource/Global/WaterReminder-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WaterReminder/Resource/Global/WaterReminder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1124,7 +1124,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "2ba2f4f6-7646-4fd4-a8b4-2e40122dae8c";
 				PROVISIONING_PROFILE_SPECIFIER = GZreminderPP;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/YYang/Documents/IOS/WaterReminder/WaterReminder/Resource/Global/WaterReminder-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WaterReminder/Resource/Global/WaterReminder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
