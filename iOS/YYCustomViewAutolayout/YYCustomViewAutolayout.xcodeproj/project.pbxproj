@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77B8F0236FCC952BBA581618 /* libPods-YYCustomViewAutolayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CCA6CB11B91FDD389B79DF /* libPods-YYCustomViewAutolayout.a */; };
+		FDAF220C205DE4BE00ED7873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAF220B205DE4BE00ED7873 /* AppDelegate.m */; };
+		FDAF220F205DE4BE00ED7873 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAF220E205DE4BE00ED7873 /* ViewController.m */; };
+		FDAF2212205DE4BE00ED7873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAF2210205DE4BE00ED7873 /* Main.storyboard */; };
+		FDAF2214205DE4BE00ED7873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAF2213205DE4BE00ED7873 /* Assets.xcassets */; };
+		FDAF2217205DE4BF00ED7873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAF2215205DE4BF00ED7873 /* LaunchScreen.storyboard */; };
+		FDAF221A205DE4BF00ED7873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAF2219205DE4BF00ED7873 /* main.m */; };
+		FDAF2225205DE5E000ED7873 /* BottomBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAF2221205DE5DF00ED7873 /* BottomBtn.m */; };
+		FDAF2226205DE5E000ED7873 /* BtnAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAF2224205DE5DF00ED7873 /* BtnAreaView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		69946963DD234F7A2F389FA7 /* Pods-YYCustomViewAutolayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYCustomViewAutolayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYCustomViewAutolayout/Pods-YYCustomViewAutolayout.release.xcconfig"; sourceTree = "<group>"; };
+		6C82B07DA11757EC8EAAED50 /* Pods-YYCustomViewAutolayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYCustomViewAutolayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYCustomViewAutolayout/Pods-YYCustomViewAutolayout.debug.xcconfig"; sourceTree = "<group>"; };
+		70CCA6CB11B91FDD389B79DF /* libPods-YYCustomViewAutolayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYCustomViewAutolayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDAF2207205DE4BE00ED7873 /* YYCustomViewAutolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYCustomViewAutolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDAF220A205DE4BE00ED7873 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FDAF220B205DE4BE00ED7873 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FDAF220D205DE4BE00ED7873 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FDAF220E205DE4BE00ED7873 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FDAF2211205DE4BE00ED7873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDAF2213205DE4BE00ED7873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDAF2216205DE4BF00ED7873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDAF2218205DE4BF00ED7873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDAF2219205DE4BF00ED7873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FDAF2221205DE5DF00ED7873 /* BottomBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomBtn.m; sourceTree = "<group>"; };
+		FDAF2222205DE5DF00ED7873 /* BtnAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtnAreaView.h; sourceTree = "<group>"; };
+		FDAF2223205DE5DF00ED7873 /* BottomBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomBtn.h; sourceTree = "<group>"; };
+		FDAF2224205DE5DF00ED7873 /* BtnAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtnAreaView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDAF2204205DE4BE00ED7873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B8F0236FCC952BBA581618 /* libPods-YYCustomViewAutolayout.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18F0CF2685FEDCDCCDB51B55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70CCA6CB11B91FDD389B79DF /* libPods-YYCustomViewAutolayout.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D795F358DAA3DB30DB00F09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C82B07DA11757EC8EAAED50 /* Pods-YYCustomViewAutolayout.debug.xcconfig */,
+				69946963DD234F7A2F389FA7 /* Pods-YYCustomViewAutolayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDAF21FE205DE4BE00ED7873 = {
+			isa = PBXGroup;
+			children = (
+				FDAF2209205DE4BE00ED7873 /* YYCustomViewAutolayout */,
+				FDAF2208205DE4BE00ED7873 /* Products */,
+				2D795F358DAA3DB30DB00F09 /* Pods */,
+				18F0CF2685FEDCDCCDB51B55 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDAF2208205DE4BE00ED7873 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDAF2207205DE4BE00ED7873 /* YYCustomViewAutolayout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDAF2209205DE4BE00ED7873 /* YYCustomViewAutolayout */ = {
+			isa = PBXGroup;
+			children = (
+				FDAF2220205DE5DF00ED7873 /* BtnArea */,
+				FDAF220A205DE4BE00ED7873 /* AppDelegate.h */,
+				FDAF220B205DE4BE00ED7873 /* AppDelegate.m */,
+				FDAF220D205DE4BE00ED7873 /* ViewController.h */,
+				FDAF220E205DE4BE00ED7873 /* ViewController.m */,
+				FDAF2210205DE4BE00ED7873 /* Main.storyboard */,
+				FDAF2213205DE4BE00ED7873 /* Assets.xcassets */,
+				FDAF2215205DE4BF00ED7873 /* LaunchScreen.storyboard */,
+				FDAF2218205DE4BF00ED7873 /* Info.plist */,
+				FDAF2219205DE4BF00ED7873 /* main.m */,
+			);
+			path = YYCustomViewAutolayout;
+			sourceTree = "<group>";
+		};
+		FDAF2220205DE5DF00ED7873 /* BtnArea */ = {
+			isa = PBXGroup;
+			children = (
+				FDAF2221205DE5DF00ED7873 /* BottomBtn.m */,
+				FDAF2222205DE5DF00ED7873 /* BtnAreaView.h */,
+				FDAF2223205DE5DF00ED7873 /* BottomBtn.h */,
+				FDAF2224205DE5DF00ED7873 /* BtnAreaView.m */,
+			);
+			path = BtnArea;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDAF2206205DE4BE00ED7873 /* YYCustomViewAutolayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDAF221D205DE4BF00ED7873 /* Build configuration list for PBXNativeTarget "YYCustomViewAutolayout" */;
+			buildPhases = (
+				749A0BB4E6326BD45D20BDA3 /* [CP] Check Pods Manifest.lock */,
+				FDAF2203205DE4BE00ED7873 /* Sources */,
+				FDAF2204205DE4BE00ED7873 /* Frameworks */,
+				FDAF2205205DE4BE00ED7873 /* Resources */,
+				3B1DBAC4172BFCF50444D481 /* [CP] Embed Pods Frameworks */,
+				7C763334E0F7DFE2957E6839 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYCustomViewAutolayout;
+			productName = YYCustomViewAutolayout;
+			productReference = FDAF2207205DE4BE00ED7873 /* YYCustomViewAutolayout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDAF21FF205DE4BE00ED7873 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = YYang;
+				TargetAttributes = {
+					FDAF2206205DE4BE00ED7873 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FDAF2202205DE4BE00ED7873 /* Build configuration list for PBXProject "YYCustomViewAutolayout" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDAF21FE205DE4BE00ED7873;
+			productRefGroup = FDAF2208205DE4BE00ED7873 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDAF2206205DE4BE00ED7873 /* YYCustomViewAutolayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDAF2205205DE4BE00ED7873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAF2217205DE4BF00ED7873 /* LaunchScreen.storyboard in Resources */,
+				FDAF2214205DE4BE00ED7873 /* Assets.xcassets in Resources */,
+				FDAF2212205DE4BE00ED7873 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B1DBAC4172BFCF50444D481 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYCustomViewAutolayout/Pods-YYCustomViewAutolayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		749A0BB4E6326BD45D20BDA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YYCustomViewAutolayout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C763334E0F7DFE2957E6839 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYCustomViewAutolayout/Pods-YYCustomViewAutolayout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDAF2203205DE4BE00ED7873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAF220F205DE4BE00ED7873 /* ViewController.m in Sources */,
+				FDAF221A205DE4BF00ED7873 /* main.m in Sources */,
+				FDAF2226205DE5E000ED7873 /* BtnAreaView.m in Sources */,
+				FDAF220C205DE4BE00ED7873 /* AppDelegate.m in Sources */,
+				FDAF2225205DE5E000ED7873 /* BottomBtn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FDAF2210205DE4BE00ED7873 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDAF2211205DE4BE00ED7873 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDAF2215205DE4BF00ED7873 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDAF2216205DE4BF00ED7873 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDAF221B205DE4BF00ED7873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FDAF221C205DE4BF00ED7873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDAF221E205DE4BF00ED7873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C82B07DA11757EC8EAAED50 /* Pods-YYCustomViewAutolayout.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N25J7WB4F8;
+				INFOPLIST_FILE = YYCustomViewAutolayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YY.YYCustomViewAutolayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDAF221F205DE4BF00ED7873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69946963DD234F7A2F389FA7 /* Pods-YYCustomViewAutolayout.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N25J7WB4F8;
+				INFOPLIST_FILE = YYCustomViewAutolayout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YY.YYCustomViewAutolayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDAF2202205DE4BE00ED7873 /* Build configuration list for PBXProject "YYCustomViewAutolayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAF221B205DE4BF00ED7873 /* Debug */,
+				FDAF221C205DE4BF00ED7873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDAF221D205DE4BF00ED7873 /* Build configuration list for PBXNativeTarget "YYCustomViewAutolayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDAF221E205DE4BF00ED7873 /* Debug */,
+				FDAF221F205DE4BF00ED7873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDAF21FF205DE4BE00ED7873 /* Project object */;
+}
