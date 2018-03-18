@@ -44,7 +44,8 @@
             //1.手动设置 contentSize  约束就可以控制BtnAreaView 的位置
             self.myScrollView.contentSize = var.intrinsicContentSize;
             [var mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.center.mas_equalTo(self.myScrollView);
+                make.centerY.mas_equalTo(self.myScrollView);
+                make.left.equalTo(0);
             }];
             //2.这种方式设置约束默认BtnAreaView 位于 myScrollView的顶部,改变位置会拉伸压缩BtnAreaView
 //            [var mas_makeConstraints:^(MASConstraintMaker *make) {
