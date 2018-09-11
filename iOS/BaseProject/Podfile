@@ -10,7 +10,10 @@ target 'BaseProject' do
   pod 'SnapKit', '~> 4.0.0'
   pod 'Kingfisher', '~> 4.0'
   pod 'Eureka'
-  pod 'MJExtension'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'JGProgressHUD'
+  pod 'NVActivityIndicatorView'
+  pod 'IQKeyboardManagerSwift'
+
 
 end

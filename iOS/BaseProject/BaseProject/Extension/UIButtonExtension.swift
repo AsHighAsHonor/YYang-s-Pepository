@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIButton{
     func y_setBackgroundColor(color: UIColor, state: UIControlState) -> Void {
-        setBackgroundImage(UIImage.imageWithColor(color), for: state)
+        setBackgroundImage(UIImage.y_imageWithColor(color), for: state)
     }
     
 }

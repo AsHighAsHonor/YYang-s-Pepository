@@ -1,36 +1,35 @@
 PODS:
   - Alamofire (4.7.3)
   - Eureka (4.2.0)
+  - IQKeyboardManagerSwift (6.1.1)
+  - JGProgressHUD (2.0.3)
   - Kingfisher (4.8.1)
-  - MJExtension (3.0.15.1)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
   - SnapKit (4.0.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Eureka
+  - IQKeyboardManagerSwift
+  - JGProgressHUD
   - Kingfisher (~> 4.0)
-  - MJExtension
+  - NVActivityIndicatorView
   - SnapKit (~> 4.0.0)
   - SwiftyJSON (~> 4.0)
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Alamofire
-    - Eureka
-    - Kingfisher
-    - MJExtension
-    - SnapKit
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Eureka: 0748c7bbb2560130e43c7bfa83e99c98854a1f42
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
-  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 83864762a69368074e9d98ca722835c3214685e2
+PODFILE CHECKSUM: e24a80e2c008c9ac1f1ca093cd88386aaf085735
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0
