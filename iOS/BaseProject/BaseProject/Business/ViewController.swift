@@ -44,7 +44,9 @@ class ViewController: UIViewController {
 //        YYLog(message: HEX_COLOR(0xff00ff))
 //        _ =  UIColor.init(hexString: 0x00000, alpha: 1)
 //        _ = UIColor.y_random()`
-        YYLog(String.y_currentTime)
+//        YYLog(String.y_currentTime)
+        
+
     }
 
     override func didReceiveMemoryWarning() {

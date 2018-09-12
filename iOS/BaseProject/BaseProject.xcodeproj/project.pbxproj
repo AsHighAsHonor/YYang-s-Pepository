@@ -8,21 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		9A77A47057EE622EB47F4049 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95E6B90BC10ED34348F61F9 /* Pods_BaseProject.framework */; };
-		CB7EF5C221462EEA002B8BBF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5C121462EEA002B8BBF /* UIColorExtension.swift */; };
-		CB7EF5C421463355002B8BBF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5C321463355002B8BBF /* StringExtension.swift */; };
-		CB7EF5C621463BD3002B8BBF /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5C521463BD3002B8BBF /* UIAlertControllerExtension.swift */; };
-		CB7EF5C821464402002B8BBF /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5C721464402002B8BBF /* BundleExtension.swift */; };
-		CB7EF5CA21464BA9002B8BBF /* DeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5C921464BA9002B8BBF /* DeviceExtension.swift */; };
-		CB7EF5CC21464CC2002B8BBF /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5CB21464CC2002B8BBF /* UIStoryboardExtension.swift */; };
-		CB7EF5CE21464F2D002B8BBF /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5CD21464F2D002B8BBF /* UIImageExtension.swift */; };
-		CB7EF5D021464F79002B8BBF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5CF21464F79002B8BBF /* UIButtonExtension.swift */; };
-		CB7EF5D2214650FE002B8BBF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5D1214650FE002B8BBF /* UIViewExtension.swift */; };
-		CB7EF5D42146530C002B8BBF /* UINavigationConrollerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5D32146530C002B8BBF /* UINavigationConrollerExtension.swift */; };
-		CB7EF5D62146547F002B8BBF /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5D52146547F002B8BBF /* UITableViewExtension.swift */; };
-		CB7EF5D821465D81002B8BBF /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5D721465D81002B8BBF /* FileManagerExtension.swift */; };
-		CB7EF5DA21465FAB002B8BBF /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5D921465FAB002B8BBF /* UIScrollViewExtension.swift */; };
-		CB7EF5DC2146601C002B8BBF /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5DB2146601C002B8BBF /* IntExtension.swift */; };
-		CB7EF5DE21466231002B8BBF /* UIViweControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7EF5DD21466231002B8BBF /* UIViweControllerExtension.swift */; };
+		CB70084C21489BB300D5DA92 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70083D21489BB300D5DA92 /* BundleExtension.swift */; };
+		CB70084D21489BB300D5DA92 /* DeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70083E21489BB300D5DA92 /* DeviceExtension.swift */; };
+		CB70084E21489BB300D5DA92 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70083F21489BB300D5DA92 /* FileManagerExtension.swift */; };
+		CB70084F21489BB300D5DA92 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084021489BB300D5DA92 /* IntExtension.swift */; };
+		CB70085021489BB300D5DA92 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084121489BB300D5DA92 /* StringExtension.swift */; };
+		CB70085121489BB300D5DA92 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084221489BB300D5DA92 /* UIAlertControllerExtension.swift */; };
+		CB70085221489BB300D5DA92 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084321489BB300D5DA92 /* UIButtonExtension.swift */; };
+		CB70085321489BB300D5DA92 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084421489BB300D5DA92 /* UIColorExtension.swift */; };
+		CB70085421489BB300D5DA92 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084521489BB300D5DA92 /* UIImageExtension.swift */; };
+		CB70085521489BB300D5DA92 /* UINavigationConrollerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084621489BB300D5DA92 /* UINavigationConrollerExtension.swift */; };
+		CB70085621489BB300D5DA92 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084721489BB300D5DA92 /* UIScrollViewExtension.swift */; };
+		CB70085721489BB300D5DA92 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084821489BB300D5DA92 /* UIStoryboardExtension.swift */; };
+		CB70085821489BB300D5DA92 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084921489BB300D5DA92 /* UITableViewExtension.swift */; };
+		CB70085921489BB300D5DA92 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084A21489BB300D5DA92 /* UIViewControllerExtension.swift */; };
+		CB70085A21489BB300D5DA92 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70084B21489BB300D5DA92 /* UIViewExtension.swift */; };
+		CB70085C2148A1C100D5DA92 /* DispatchTimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70085B2148A1C100D5DA92 /* DispatchTimeExtension.swift */; };
+		CB70085F2148B85800D5DA92 /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70085E2148B85800D5DA92 /* HudManager.swift */; };
+		CB7008652148EC2500D5DA92 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7008642148EC2500D5DA92 /* LaunchScreenManager.swift */; };
 		FD7532AE21440A4600FB5E10 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7532A121440A4600FB5E10 /* Info.plist */; };
 		FD7532AF21440A4600FB5E10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7532A221440A4600FB5E10 /* Assets.xcassets */; };
 		FD7532B021440A4600FB5E10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7532A621440A4600FB5E10 /* ViewController.swift */; };
@@ -39,21 +42,24 @@
 		7520A81E163862C1095D41D8 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		919DCF8CB2A5E9B944499F0D /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B95E6B90BC10ED34348F61F9 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB7EF5C121462EEA002B8BBF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = BaseProject/Extension/UIColorExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5C321463355002B8BBF /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = BaseProject/Extension/StringExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5C521463BD3002B8BBF /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtension.swift; path = BaseProject/Extension/UIAlertControllerExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5C721464402002B8BBF /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BundleExtension.swift; path = BaseProject/Extension/BundleExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5C921464BA9002B8BBF /* DeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceExtension.swift; path = BaseProject/Extension/DeviceExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5CB21464CC2002B8BBF /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtension.swift; path = BaseProject/Extension/UIStoryboardExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5CD21464F2D002B8BBF /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = BaseProject/Extension/UIImageExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5CF21464F79002B8BBF /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButtonExtension.swift; path = BaseProject/Extension/UIButtonExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5D1214650FE002B8BBF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = BaseProject/Extension/UIViewExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5D32146530C002B8BBF /* UINavigationConrollerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UINavigationConrollerExtension.swift; path = BaseProject/Extension/UINavigationConrollerExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5D52146547F002B8BBF /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = BaseProject/Extension/UITableViewExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5D721465D81002B8BBF /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileManagerExtension.swift; path = BaseProject/Extension/FileManagerExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5D921465FAB002B8BBF /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIScrollViewExtension.swift; path = BaseProject/Extension/UIScrollViewExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5DB2146601C002B8BBF /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = BaseProject/Extension/IntExtension.swift; sourceTree = SOURCE_ROOT; };
-		CB7EF5DD21466231002B8BBF /* UIViweControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViweControllerExtension.swift; path = BaseProject/Extension/UIViweControllerExtension.swift; sourceTree = SOURCE_ROOT; };
+		CB70083D21489BB300D5DA92 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		CB70083E21489BB300D5DA92 /* DeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceExtension.swift; sourceTree = "<group>"; };
+		CB70083F21489BB300D5DA92 /* FileManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
+		CB70084021489BB300D5DA92 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		CB70084121489BB300D5DA92 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		CB70084221489BB300D5DA92 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		CB70084321489BB300D5DA92 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		CB70084421489BB300D5DA92 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CB70084521489BB300D5DA92 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		CB70084621489BB300D5DA92 /* UINavigationConrollerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationConrollerExtension.swift; sourceTree = "<group>"; };
+		CB70084721489BB300D5DA92 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		CB70084821489BB300D5DA92 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		CB70084921489BB300D5DA92 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		CB70084A21489BB300D5DA92 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		CB70084B21489BB300D5DA92 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CB70085B2148A1C100D5DA92 /* DispatchTimeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchTimeExtension.swift; sourceTree = "<group>"; };
+		CB70085E2148B85800D5DA92 /* HudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
+		CB7008642148EC2500D5DA92 /* LaunchScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenManager.swift; sourceTree = "<group>"; };
 		FD7532892143DADD00FB5E10 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7532A121440A4600FB5E10 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD7532A221440A4600FB5E10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +100,45 @@
 				B95E6B90BC10ED34348F61F9 /* Pods_BaseProject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB70083C21489BB300D5DA92 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CB70083D21489BB300D5DA92 /* BundleExtension.swift */,
+				CB70083E21489BB300D5DA92 /* DeviceExtension.swift */,
+				CB70083F21489BB300D5DA92 /* FileManagerExtension.swift */,
+				CB70084021489BB300D5DA92 /* IntExtension.swift */,
+				CB70084121489BB300D5DA92 /* StringExtension.swift */,
+				CB70084221489BB300D5DA92 /* UIAlertControllerExtension.swift */,
+				CB70084321489BB300D5DA92 /* UIButtonExtension.swift */,
+				CB70084421489BB300D5DA92 /* UIColorExtension.swift */,
+				CB70084521489BB300D5DA92 /* UIImageExtension.swift */,
+				CB70084621489BB300D5DA92 /* UINavigationConrollerExtension.swift */,
+				CB70084A21489BB300D5DA92 /* UIViewControllerExtension.swift */,
+				CB70084721489BB300D5DA92 /* UIScrollViewExtension.swift */,
+				CB70084821489BB300D5DA92 /* UIStoryboardExtension.swift */,
+				CB70084921489BB300D5DA92 /* UITableViewExtension.swift */,
+				CB70084B21489BB300D5DA92 /* UIViewExtension.swift */,
+				CB70085B2148A1C100D5DA92 /* DispatchTimeExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CB70085D2148B6CB00D5DA92 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				CB70085E2148B85800D5DA92 /* HudManager.swift */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		CB7008632148EC1000D5DA92 /* LunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CB7008642148EC2500D5DA92 /* LaunchScreenManager.swift */,
+			);
+			path = LunchScreen;
 			sourceTree = "<group>";
 		};
 		FD7532802143DADD00FB5E10 = {
@@ -162,7 +207,7 @@
 		FD7532A421440A4600FB5E10 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				FD7532C42144C32600FB5E10 /* Extension */,
+				CB70083C21489BB300D5DA92 /* Extension */,
 				FD7532C32144C2F500FB5E10 /* SelfAPI */,
 			);
 			path = Vendor;
@@ -207,31 +252,11 @@
 		FD7532C32144C2F500FB5E10 /* SelfAPI */ = {
 			isa = PBXGroup;
 			children = (
+				CB7008632148EC1000D5DA92 /* LunchScreen */,
+				CB70085D2148B6CB00D5DA92 /* HUD */,
 				FD7532C52144C39E00FB5E10 /* CoreNet */,
 			);
 			path = SelfAPI;
-			sourceTree = "<group>";
-		};
-		FD7532C42144C32600FB5E10 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				CB7EF5C121462EEA002B8BBF /* UIColorExtension.swift */,
-				CB7EF5C321463355002B8BBF /* StringExtension.swift */,
-				CB7EF5C521463BD3002B8BBF /* UIAlertControllerExtension.swift */,
-				CB7EF5C721464402002B8BBF /* BundleExtension.swift */,
-				CB7EF5C921464BA9002B8BBF /* DeviceExtension.swift */,
-				CB7EF5CB21464CC2002B8BBF /* UIStoryboardExtension.swift */,
-				CB7EF5CD21464F2D002B8BBF /* UIImageExtension.swift */,
-				CB7EF5CF21464F79002B8BBF /* UIButtonExtension.swift */,
-				CB7EF5D1214650FE002B8BBF /* UIViewExtension.swift */,
-				CB7EF5D32146530C002B8BBF /* UINavigationConrollerExtension.swift */,
-				CB7EF5D52146547F002B8BBF /* UITableViewExtension.swift */,
-				CB7EF5D721465D81002B8BBF /* FileManagerExtension.swift */,
-				CB7EF5D921465FAB002B8BBF /* UIScrollViewExtension.swift */,
-				CB7EF5DB2146601C002B8BBF /* IntExtension.swift */,
-				CB7EF5DD21466231002B8BBF /* UIViweControllerExtension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		FD7532C52144C39E00FB5E10 /* CoreNet */ = {
@@ -254,7 +279,6 @@
 				FD7532862143DADD00FB5E10 /* Frameworks */,
 				FD7532872143DADD00FB5E10 /* Resources */,
 				7E36CEBAFC8D7DCCC27DCEBE /* [CP] Embed Pods Frameworks */,
-				784EF6B025605BE1F914E22F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,21 +338,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		784EF6B025605BE1F914E22F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7E36CEBAFC8D7DCCC27DCEBE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,26 +395,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7EF5D2214650FE002B8BBF /* UIViewExtension.swift in Sources */,
-				CB7EF5D821465D81002B8BBF /* FileManagerExtension.swift in Sources */,
 				FD7532C22144154600FB5E10 /* MainMacro.swift in Sources */,
-				CB7EF5C221462EEA002B8BBF /* UIColorExtension.swift in Sources */,
+				CB70085321489BB300D5DA92 /* UIColorExtension.swift in Sources */,
+				CB70085621489BB300D5DA92 /* UIScrollViewExtension.swift in Sources */,
+				CB70084E21489BB300D5DA92 /* FileManagerExtension.swift in Sources */,
+				CB70085821489BB300D5DA92 /* UITableViewExtension.swift in Sources */,
+				CB70085721489BB300D5DA92 /* UIStoryboardExtension.swift in Sources */,
 				FD7532C02144153300FB5E10 /* BussinessMacro.swift in Sources */,
+				CB70084F21489BB300D5DA92 /* IntExtension.swift in Sources */,
 				FD7532C72144C40E00FB5E10 /* HttpCaller.swift in Sources */,
-				CB7EF5C421463355002B8BBF /* StringExtension.swift in Sources */,
-				CB7EF5CA21464BA9002B8BBF /* DeviceExtension.swift in Sources */,
-				CB7EF5C821464402002B8BBF /* BundleExtension.swift in Sources */,
-				CB7EF5D62146547F002B8BBF /* UITableViewExtension.swift in Sources */,
-				CB7EF5DE21466231002B8BBF /* UIViweControllerExtension.swift in Sources */,
-				CB7EF5C621463BD3002B8BBF /* UIAlertControllerExtension.swift in Sources */,
+				CB70084C21489BB300D5DA92 /* BundleExtension.swift in Sources */,
 				FD7532BE214412A200FB5E10 /* YYang-PrefixHeader.swift in Sources */,
-				CB7EF5DA21465FAB002B8BBF /* UIScrollViewExtension.swift in Sources */,
-				CB7EF5DC2146601C002B8BBF /* IntExtension.swift in Sources */,
-				CB7EF5D42146530C002B8BBF /* UINavigationConrollerExtension.swift in Sources */,
-				CB7EF5CE21464F2D002B8BBF /* UIImageExtension.swift in Sources */,
+				CB70085421489BB300D5DA92 /* UIImageExtension.swift in Sources */,
+				CB70085C2148A1C100D5DA92 /* DispatchTimeExtension.swift in Sources */,
+				CB70085F2148B85800D5DA92 /* HudManager.swift in Sources */,
+				CB70085921489BB300D5DA92 /* UIViewControllerExtension.swift in Sources */,
+				CB70084D21489BB300D5DA92 /* DeviceExtension.swift in Sources */,
+				CB70085521489BB300D5DA92 /* UINavigationConrollerExtension.swift in Sources */,
+				CB70085221489BB300D5DA92 /* UIButtonExtension.swift in Sources */,
+				CB70085121489BB300D5DA92 /* UIAlertControllerExtension.swift in Sources */,
 				FD7532B321440A4600FB5E10 /* AppDelegate.swift in Sources */,
-				CB7EF5D021464F79002B8BBF /* UIButtonExtension.swift in Sources */,
-				CB7EF5CC21464CC2002B8BBF /* UIStoryboardExtension.swift in Sources */,
+				CB70085A21489BB300D5DA92 /* UIViewExtension.swift in Sources */,
+				CB70085021489BB300D5DA92 /* StringExtension.swift in Sources */,
+				CB7008652148EC2500D5DA92 /* LaunchScreenManager.swift in Sources */,
 				FD7532B021440A4600FB5E10 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,6 +23,10 @@ public extension UIDevice{
         return Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
     }
     
+    public static var y_bundleName: String{
+        return Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
+    }
+    
     public static var y_currentLan: String {
         return "\(String(describing: Locale.preferredLanguages.first))"
     }
