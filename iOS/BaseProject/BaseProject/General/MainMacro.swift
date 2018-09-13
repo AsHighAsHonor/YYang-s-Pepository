@@ -51,23 +51,6 @@ public let TABBAR_HEIGHT = (IS_IPHONE_X ? 83 : 49)
 
 public let NAVIGATIONBAR_HEIGHT = 44
 
- // MARK: - Color
-
-public let RGB_COLOR = {(r: Float, g: Float, b: Float) ->UIColor in
-    return UIColor.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha:1.0)
-}
-
-public let RGB_ACOLOR:((Float,Float,Float,Float) -> UIColor ) = { (r: Float, g: Float , b: Float , a: Float ) -> UIColor in
-    return UIColor.init(red: CGFloat(CGFloat(r)/255.0), green: CGFloat(CGFloat(g)/255.0), blue: CGFloat(CGFloat(b)/255.0), alpha: CGFloat(a))
-}
-
-public let HEX_COLOR:((Int) -> UIColor) = { (rgbValue : Int) -> UIColor in
-    return HEX_ACOLOR(rgbValue,1.0)
-}
-
-public let HEX_ACOLOR:((Int,Float) -> UIColor) = { (rgbValue : Int, alpha : Float) -> UIColor in
-    return UIColor(red: CGFloat(CGFloat((rgbValue & 0xFF0000) >> 16)/255), green: CGFloat(CGFloat((rgbValue & 0xFF00) >> 8)/255), blue: CGFloat(CGFloat(rgbValue & 0xFF)/255), alpha: CGFloat(alpha))
-}
 
  // MARK: - Font
 

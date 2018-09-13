@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A77A47057EE622EB47F4049 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95E6B90BC10ED34348F61F9 /* Pods_BaseProject.framework */; };
+		CB3A7E4B2149F21E00B41A99 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A7E4A2149F21E00B41A99 /* BaseTabBarController.swift */; };
+		CB3A7E4E214A06DB00B41A99 /* BaseTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A7E4D214A06DB00B41A99 /* BaseTabBar.swift */; };
 		CB70084C21489BB300D5DA92 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70083D21489BB300D5DA92 /* BundleExtension.swift */; };
 		CB70084D21489BB300D5DA92 /* DeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70083E21489BB300D5DA92 /* DeviceExtension.swift */; };
 		CB70084E21489BB300D5DA92 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70083F21489BB300D5DA92 /* FileManagerExtension.swift */; };
@@ -42,6 +44,8 @@
 		7520A81E163862C1095D41D8 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		919DCF8CB2A5E9B944499F0D /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B95E6B90BC10ED34348F61F9 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3A7E4A2149F21E00B41A99 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		CB3A7E4D214A06DB00B41A99 /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
 		CB70083D21489BB300D5DA92 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		CB70083E21489BB300D5DA92 /* DeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceExtension.swift; sourceTree = "<group>"; };
 		CB70083F21489BB300D5DA92 /* FileManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 				B95E6B90BC10ED34348F61F9 /* Pods_BaseProject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB3A7E4C214A068F00B41A99 /* BaseTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				CB3A7E4A2149F21E00B41A99 /* BaseTabBarController.swift */,
+				CB3A7E4D214A06DB00B41A99 /* BaseTabBar.swift */,
+			);
+			path = BaseTabBarController;
 			sourceTree = "<group>";
 		};
 		CB70083C21489BB300D5DA92 /* Extension */ = {
@@ -225,6 +238,7 @@
 		FD7532A721440A4600FB5E10 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				CB3A7E4C214A068F00B41A99 /* BaseTabBarController */,
 				FD7532A821440A4600FB5E10 /* Storyboard */,
 				FD7532AD21440A4600FB5E10 /* AppDelegate.swift */,
 				FD7532BF2144153300FB5E10 /* BussinessMacro.swift */,
@@ -409,9 +423,11 @@
 				CB70085421489BB300D5DA92 /* UIImageExtension.swift in Sources */,
 				CB70085C2148A1C100D5DA92 /* DispatchTimeExtension.swift in Sources */,
 				CB70085F2148B85800D5DA92 /* HudManager.swift in Sources */,
+				CB3A7E4E214A06DB00B41A99 /* BaseTabBar.swift in Sources */,
 				CB70085921489BB300D5DA92 /* UIViewControllerExtension.swift in Sources */,
 				CB70084D21489BB300D5DA92 /* DeviceExtension.swift in Sources */,
 				CB70085521489BB300D5DA92 /* UINavigationConrollerExtension.swift in Sources */,
+				CB3A7E4B2149F21E00B41A99 /* BaseTabBarController.swift in Sources */,
 				CB70085221489BB300D5DA92 /* UIButtonExtension.swift in Sources */,
 				CB70085121489BB300D5DA92 /* UIAlertControllerExtension.swift in Sources */,
 				FD7532B321440A4600FB5E10 /* AppDelegate.swift in Sources */,
