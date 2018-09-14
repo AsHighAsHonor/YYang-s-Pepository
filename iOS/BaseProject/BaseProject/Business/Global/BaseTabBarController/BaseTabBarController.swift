@@ -17,6 +17,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.backgroundImage = UIImage()
         tabBar.tintColor = UIColor.black
         tabBar.unselectedItemTintColor = UIColor.white
+        setValue(BaseTabBar(), forKey: "tabBar")
         delegate = self
     }
 
