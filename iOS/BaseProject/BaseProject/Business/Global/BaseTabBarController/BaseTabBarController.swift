@@ -8,24 +8,36 @@
 
 import UIKit
 
-class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
+class BaseTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tabBar.backgroundColor = UIColor(hexString: "#D1E5F0")
-        tabBar.backgroundImage = UIImage()
-        tabBar.tintColor = UIColor.black
-        tabBar.unselectedItemTintColor = UIColor.white
-        setValue(BaseTabBar(), forKey: "tabBar")
+//        tabBar.backgroundColor = UIColor(hexString: "#D1E5F0")
+//        tabBar.backgroundImage = UIImage()
+//        tabBar.tintColor = UIColor.black
+//        tabBar.unselectedItemTintColor = UIColor.white
+        let tab = BaseTabBar()
+        tab.baseTabBarDelegate = self
+        setValue(tab, forKey: "tabBar")
         delegate = self
     }
 
+}
+
+
+
+ // MARK: - DelegateMethod
+extension BaseTabBarController: BaseTabBarDelegate, UITabBarControllerDelegate{
+    func BaseTabBarCenterBtnClicked(button: UIButton) {
+        YYLog(button)
+    }
+    
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         YYLog(tabBarController.selectedIndex)
         return true
     }
+
     
-
-
+    
 }

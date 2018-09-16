@@ -9,17 +9,27 @@
 import UIKit
 
 
+
+//只有类才能实现的protocol
+//有一种场景，protocol作为delegate，需要使用weak关键字修饰的时候，需要指定delegate的类型为ptotocol型，这个ptotocol需要添加class修饰符，比如下面的这个protocol，因为类类型的对象才有引用计数，才有weak的概念，没有引用计数的struct型是没有weak概念的
+protocol BaseTabBarDelegate: class{
+    func BaseTabBarCenterBtnClicked(button: UIButton)
+}
+
 class BaseTabBar: UITabBar {
     
-    let centerBtnWidth: CGFloat = 80
-    let centerBtnHeight: CGFloat = 60
+    private let centerBtnWidth: CGFloat = 80
+    private let centerBtnHeight: CGFloat = 60
+    weak var baseTabBarDelegate: BaseTabBarDelegate?
     
     
 
-    lazy var centerBtn : UIButton = {
+    private lazy var centerBtn : UIButton = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: centerBtnWidth, height: centerBtnHeight))
         btn.y_setBackgroundColor(color: UIColor.red, state: .normal)
         btn.titleLabel?.text = "PLUS"
+//        btn.addTarget(self, action: Selector(("centerBtnClicked")), for:.touchUpInside)    // swift 中的 target-action2种写法   1.Selector通过字符串 2. 使用#selector
+        btn.addTarget(self, action: #selector(centerBtnClicked(btn:)) , for:.touchUpInside)
         return btn
     }()
     
@@ -27,6 +37,11 @@ class BaseTabBar: UITabBar {
         super.init(frame: frame)
         centerBtn.tintColor = UIColor.black
         self.addSubview(centerBtn)
+        
+        backgroundColor = UIColor(hexString: "#D1E5F0")
+        backgroundImage = UIImage()
+        tintColor = UIColor.black
+        unselectedItemTintColor = UIColor.white
     }
     
     override func layoutSubviews() {
@@ -61,6 +76,11 @@ class BaseTabBar: UITabBar {
         bringSubview(toFront: centerBtn)
         
     }
+    
+    @objc private func centerBtnClicked(btn: UIButton) {
+        baseTabBarDelegate?.BaseTabBarCenterBtnClicked(button: btn)
+    }
+    
     
     
     required init?(coder aDecoder: NSCoder) {

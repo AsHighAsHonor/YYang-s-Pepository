@@ -24,7 +24,8 @@ public extension UIDevice{
     }
     
     public static var y_bundleName: String{
-        return Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
+        let bundleName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
+        return bundleName.replacingOccurrences(of: "-", with: "_")
     }
     
     public static var y_currentLan: String {

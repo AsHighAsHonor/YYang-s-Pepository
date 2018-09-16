@@ -47,8 +47,7 @@ extension UINavigationController{
     }
     
     public func y_NavFindCtrl(ctrlName: String) -> UIViewController? {
-        let APPName = UIDevice.y_bundleName.replacingOccurrences(of: "-", with: "_")
-        if let tagetCtrl = NSClassFromString(APPName + "." + ctrlName) {
+        if let tagetCtrl = NSClassFromString(UIDevice.y_bundleName + "." + ctrlName) {
             for ctrl in viewControllers {
                 if(ctrl.isKind(of: tagetCtrl)){
                     return ctrl
