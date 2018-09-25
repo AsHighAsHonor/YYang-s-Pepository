@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyRxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve4-vQ-sPT">
+                                <rect key="frame" x="166" y="121" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbm-1O-IRH">
+                                <rect key="frame" x="164.5" y="333" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivC-g6-LGa">
+                                <rect key="frame" x="30" y="162" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMa-CD-46c">
+                                <rect key="frame" x="163" y="212" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkg-MB-JlZ">
+                                <rect key="frame" x="166.5" y="80" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lkg-MB-JlZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ho-i0-ATU"/>
+                            <constraint firstItem="SMa-CD-46c" firstAttribute="top" secondItem="ivC-g6-LGa" secondAttribute="bottom" constant="20" id="FDa-EN-UPG"/>
+                            <constraint firstItem="ivC-g6-LGa" firstAttribute="top" secondItem="Ve4-vQ-sPT" secondAttribute="bottom" constant="20" id="HAY-BK-vVP"/>
+                            <constraint firstItem="Lkg-MB-JlZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="IGv-b4-3Hk"/>
+                            <constraint firstItem="ivC-g6-LGa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="JMz-h3-JWp"/>
+                            <constraint firstItem="Jbm-1O-IRH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LO2-To-ijo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ivC-g6-LGa" secondAttribute="trailing" constant="30" id="MB4-XO-Gm6"/>
+                            <constraint firstItem="Jbm-1O-IRH" firstAttribute="top" secondItem="SMa-CD-46c" secondAttribute="bottom" constant="90" id="akX-5F-Cpe"/>
+                            <constraint firstItem="SMa-CD-46c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kFZ-kH-rdg"/>
+                            <constraint firstItem="Ve4-vQ-sPT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nxc-oO-aIC"/>
+                            <constraint firstItem="Ve4-vQ-sPT" firstAttribute="top" secondItem="Lkg-MB-JlZ" secondAttribute="bottom" constant="20" id="zck-uv-Box"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myButton" destination="Jbm-1O-IRH" id="yTt-xg-f3w"/>
+                        <outlet property="myLabel" destination="Ve4-vQ-sPT" id="KI6-hv-vwV"/>
+                        <outlet property="myLabel2" destination="Lkg-MB-JlZ" id="RjJ-EY-rnD"/>
+                        <outlet property="mySwitch" destination="SMa-CD-46c" id="y17-ay-hna"/>
+                        <outlet property="myTextField" destination="ivC-g6-LGa" id="njM-di-OsJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
