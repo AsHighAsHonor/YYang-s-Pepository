@@ -8,5 +8,12 @@ target 'MyRxSwift' do
   # Pods for MyRxSwift
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'RxDataSources', '~> 3.0'
+    pod 'RxAlamofire'
+    pod 'ObjectMapper', '~> 3.3'
+    pod 'Moya/RxSwift', '~> 11.0'
+
+
+    
 
 end

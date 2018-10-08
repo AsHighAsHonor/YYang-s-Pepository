@@ -28,7 +28,6 @@
 		CB70085C2148A1C100D5DA92 /* DispatchTimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70085B2148A1C100D5DA92 /* DispatchTimeExtension.swift */; };
 		CB70085F2148B85800D5DA92 /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB70085E2148B85800D5DA92 /* HudManager.swift */; };
 		CB7008652148EC2500D5DA92 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7008642148EC2500D5DA92 /* LaunchScreenManager.swift */; };
-		FD7532AE21440A4600FB5E10 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7532A121440A4600FB5E10 /* Info.plist */; };
 		FD7532AF21440A4600FB5E10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7532A221440A4600FB5E10 /* Assets.xcassets */; };
 		FD7532B021440A4600FB5E10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7532A621440A4600FB5E10 /* ViewController.swift */; };
 		FD7532B321440A4600FB5E10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7532AD21440A4600FB5E10 /* AppDelegate.swift */; };
@@ -344,7 +343,6 @@
 			files = (
 				FD7532B921440A6A00FB5E10 /* LaunchScreen.storyboard in Resources */,
 				FD7532AF21440A4600FB5E10 /* Assets.xcassets in Resources */,
-				FD7532AE21440A4600FB5E10 /* Info.plist in Resources */,
 				FD7532BA21440A6A00FB5E10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

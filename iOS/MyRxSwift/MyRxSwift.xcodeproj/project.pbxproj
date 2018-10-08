@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB58E16621630F1500AB8BEA /* RxObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58E16521630F1500AB8BEA /* RxObjectMapper.swift */; };
+		CB58E16821630F6E00AB8BEA /* DouBanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58E16721630F6E00AB8BEA /* DouBanModel.swift */; };
 		CB5902DE215A12B80041DA39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5902DD215A12B80041DA39 /* AppDelegate.swift */; };
 		CB5902E0215A12B80041DA39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5902DF215A12B80041DA39 /* ViewController.swift */; };
 		CB5902E3215A12B80041DA39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5902E1215A12B80041DA39 /* Main.storyboard */; };
 		CB5902E5215A12BA0041DA39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5902E4215A12BA0041DA39 /* Assets.xcassets */; };
 		CB5902E8215A12BA0041DA39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5902E6215A12BA0041DA39 /* LaunchScreen.storyboard */; };
+		CB5902F0215B20FC0041DA39 /* SevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5902EF215B20FC0041DA39 /* SevenViewController.swift */; };
+		CB5902F2215B22930041DA39 /* SwiftPchFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5902F1215B22930041DA39 /* SwiftPchFile.swift */; };
+		CB71D048215B4D890094D2F8 /* FifteenthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB71D047215B4D890094D2F8 /* FifteenthViewController.swift */; };
+		CBCD50EF215CA12700BCF544 /* ThirtyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCD50EE215CA12700BCF544 /* ThirtyViewController.swift */; };
 		DA201B71D4DFFB6783DBADF9 /* Pods_MyRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E8331C38EF3A841FB397B9 /* Pods_MyRxSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +25,8 @@
 		151DB66163C2E5B8C62E9F3B /* Pods-MyRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRxSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRxSwift/Pods-MyRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B6E8331C38EF3A841FB397B9 /* Pods_MyRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C5B3D898B033C6E59196B5 /* Pods-MyRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRxSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRxSwift/Pods-MyRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		CB58E16521630F1500AB8BEA /* RxObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxObjectMapper.swift; sourceTree = "<group>"; };
+		CB58E16721630F6E00AB8BEA /* DouBanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanModel.swift; sourceTree = "<group>"; };
 		CB5902DA215A12B80041DA39 /* MyRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5902DD215A12B80041DA39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB5902DF215A12B80041DA39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +34,10 @@
 		CB5902E4215A12BA0041DA39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB5902E7215A12BA0041DA39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB5902E9215A12BA0041DA39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB5902EF215B20FC0041DA39 /* SevenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenViewController.swift; sourceTree = "<group>"; };
+		CB5902F1215B22930041DA39 /* SwiftPchFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPchFile.swift; sourceTree = "<group>"; };
+		CB71D047215B4D890094D2F8 /* FifteenthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifteenthViewController.swift; sourceTree = "<group>"; };
+		CBCD50EE215CA12700BCF544 /* ThirtyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirtyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,12 @@
 				CB5902E4215A12BA0041DA39 /* Assets.xcassets */,
 				CB5902E6215A12BA0041DA39 /* LaunchScreen.storyboard */,
 				CB5902E9215A12BA0041DA39 /* Info.plist */,
+				CB5902EF215B20FC0041DA39 /* SevenViewController.swift */,
+				CB5902F1215B22930041DA39 /* SwiftPchFile.swift */,
+				CB71D047215B4D890094D2F8 /* FifteenthViewController.swift */,
+				CBCD50EE215CA12700BCF544 /* ThirtyViewController.swift */,
+				CB58E16521630F1500AB8BEA /* RxObjectMapper.swift */,
+				CB58E16721630F6E00AB8BEA /* DouBanModel.swift */,
 			);
 			path = MyRxSwift;
 			sourceTree = "<group>";
@@ -164,12 +182,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyRxSwift/Pods-MyRxSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,8 +234,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB71D048215B4D890094D2F8 /* FifteenthViewController.swift in Sources */,
 				CB5902E0215A12B80041DA39 /* ViewController.swift in Sources */,
+				CB5902F2215B22930041DA39 /* SwiftPchFile.swift in Sources */,
+				CB5902F0215B20FC0041DA39 /* SevenViewController.swift in Sources */,
+				CBCD50EF215CA12700BCF544 /* ThirtyViewController.swift in Sources */,
 				CB5902DE215A12B80041DA39 /* AppDelegate.swift in Sources */,
+				CB58E16821630F6E00AB8BEA /* DouBanModel.swift in Sources */,
+				CB58E16621630F1500AB8BEA /* RxObjectMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,10 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N25J7WB4F8;
 				INFOPLIST_FILE = MyRxSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Drag.MyRxSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -370,10 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N25J7WB4F8;
 				INFOPLIST_FILE = MyRxSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Drag.MyRxSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
