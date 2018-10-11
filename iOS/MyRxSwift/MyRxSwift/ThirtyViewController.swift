@@ -35,20 +35,47 @@ class ThirtyViewController: UIViewController {
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         myTableView.tableFooterView = UIView()
         
-        let dataObservable = requestJSON(.get, url)
+//        let dataObservable = requestJSON(.get, url)
+//            .map{$1}
+//            .mapObject(type: Douban.self)
+//            .map{ $0.channels ?? []}
+    
+
+        let dataObservable = requestJSON(.get, url).debug()
             .map{$1}
-            .mapObject(type: Douban.self)
-            .map{ $0.channels ?? []}
+            .map{$0}
+            .flatMap{data -> Observable<[ChannelCodable]>in
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let douban = try decoder.decode(DoubanCodable.self, from: (data as! Data))
+                return Observable.just(douban.channels!)
+        }
         
         
-        
-        dataObservable.bind(to: myTableView.rx.items){  (tableView, row, element) in
+        dataObservable.bind(to: myTableView.rx.items){ tableView, row , element in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-            cell.textLabel?.text = "\(row)：\(element.name!)"
+            cell.textLabel?.text = element.name
+            cell.detailTextLabel?.text = element.nameEn
             return cell
-            }.disposed(by: disposeBag)
+        }.disposed(by: disposeBag)
+    
         
+//        dataObservable.bind(to: myTableView.rx.items){ tableView, row, element in
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+//            cell.textLabel?.text = element.name
+//            return cell
+//            }.disposed(by: disposeBag)
         
+    
+        
+        myTableView.rx
+            .itemSelected.subscribe(onNext: {
+                print($0.row)
+            }).disposed(by: disposeBag)
+        
+        myTableView.rx.modelSelected(Channel.self).subscribe(onNext: {
+            print($0.name)
+        }).disposed(by: disposeBag)
         
     }
     
