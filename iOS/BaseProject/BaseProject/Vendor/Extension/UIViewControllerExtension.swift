@@ -46,22 +46,22 @@ extension UIViewController {
  // MARK: - NavigationStack
 extension UIViewController{
 
-    public func y_pop(delay: Double = 0, level: Int = 1, animated: Bool = true) {
+    public func pop(delay: Double = 0, level: Int = 1, animated: Bool = true) {
         view.endEditing(true)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime(floatLiteral:delay)) {
-            _ = self.navigationController?.y_NavPop(level: level, animated: animated)
+            _ = self.navigationController?.NavPop(level: level, animated: animated)
         }
     }
     
-    public func y_delayDismiss(delay: Double = 2.0, animated: Bool = true, completion: @escaping (()-> Void)) {
+    public func delayDismiss(delay: Double = 2.0, animated: Bool = true, completion: @escaping (()-> Void)) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime(floatLiteral: delay)) {
             self.dismiss(animated: animated, completion: completion)
         }
     }
 
-    func y_popToCtrl(ctrlName: String){
+    func popToCtrl(ctrlName: String){
         view.endEditing(true)
-        _ = navigationController?.y_NavPopToCtrl(ctrlName: ctrlName, animated: true)
+        _ = navigationController?.NavPopToCtrl(ctrlName: ctrlName, animated: true)
     }
 
 }
@@ -88,7 +88,7 @@ extension UIViewController{
     func setNavigationBarUnderlineColor(color: UIColor) {
         if let navBar = navigationController?.navigationBar {
             navBar.setBackgroundImage(UIImage(), for: .default)
-            navBar.shadowImage = UIImage.y_imageWithColor(color)
+            navBar.shadowImage = UIImage.imageWithColor(color)
         }
     }
     

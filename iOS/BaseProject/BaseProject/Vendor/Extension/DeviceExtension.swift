@@ -11,28 +11,28 @@ import UIKit
 
 public extension UIDevice{
     
-    public static var y_version: String {
+    public static var version: String {
         return Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     }
     
-    public static var y_build: String {
+    public static var build: String {
         return Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
     }
     
-    public static var y_identifier: String {
+    public static var identifier: String {
         return Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
     }
     
-    public static var y_bundleName: String{
+    public static var bundleName: String{
         let bundleName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
         return bundleName.replacingOccurrences(of: "-", with: "_")
     }
     
-    public static var y_currentLan: String {
+    public static var currentLan: String {
         return "\(String(describing: Locale.preferredLanguages.first))"
     }
     
-    public static var y_deviceModel: String {
+    public static var deviceModel: String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let str = withUnsafePointer(to: &systemInfo.machine.0) { ptr in

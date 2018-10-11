@@ -19,7 +19,7 @@ public extension String{
 
  // MARK: - Date
 public extension String{
-    func y_currentTime(format: String = "yyyyMMddHHmmssSSS") -> String {
+    func currentTime(format: String = "yyyyMMddHHmmssSSS") -> String {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
@@ -32,23 +32,23 @@ public extension String{
 
 // MARK: - Version Compare
 public extension String{
-    public func y_isEqualTo(_ v: String) -> Bool {
+    public func isEqualTo(_ v: String) -> Bool {
         return self.compare(v, options: .numeric, range: nil, locale: nil) == .orderedSame
     }
     
-    public func y_isHigherThan(_ v: String) -> Bool {
+    public func isHigherThan(_ v: String) -> Bool {
         return self.compare(v, options: .numeric, range: nil, locale: nil) == .orderedDescending
     }
     
-    public func y_isEqualToOrHigherThan(_ v: String) -> Bool {
+    public func isEqualToOrHigherThan(_ v: String) -> Bool {
         return self.compare(v, options: .numeric, range: nil, locale: nil) != .orderedAscending
     }
     
-    public func y_isLowerThan(_ v: String) -> Bool {
+    public func isLowerThan(_ v: String) -> Bool {
         return self.compare(v, options: .numeric, range: nil, locale: nil) == .orderedAscending
     }
     
-    public func y_isEqualToOrLowerThan(_ v: String) -> Bool {
+    public func isEqualToOrLowerThan(_ v: String) -> Bool {
         return self.compare(v, options: .numeric, range: nil, locale: nil) != .orderedDescending
     }
     
@@ -58,19 +58,19 @@ public extension String{
 // MARK: - Regular expression
 public extension String {
     
-    public func y_validateWithRegExp(regExp: String) -> Bool {
+    public func validateWithRegExp(regExp: String) -> Bool {
         let predicate = NSPredicate(format: "SELF MATCHES %@", regExp)
         return predicate.evaluate(with: self)
     }
     
-    public var y_isEmailValidate: Bool {
+    public var isEmailValidate: Bool {
         let regExp_email = "^[a-zA-Z0-9]{1,}@[a-zA-Z0-9]{1,}\\.[a-zA-Z]{2,}$"
-        return y_validateWithRegExp(regExp: regExp_email)
+        return validateWithRegExp(regExp: regExp_email)
     }
     
-    public var y_isPhoneNumberValidate: Bool {
+    public var isPhoneNumberValidate: Bool {
         let regExp_phoneNumber = "^1\\d{10}$"
-        return y_validateWithRegExp(regExp: regExp_phoneNumber)
+        return validateWithRegExp(regExp: regExp_phoneNumber)
     }
     
 }

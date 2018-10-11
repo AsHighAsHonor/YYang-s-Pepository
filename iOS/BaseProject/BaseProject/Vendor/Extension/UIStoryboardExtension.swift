@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIStoryboard {
-    public static func y_loadController(ctrlName: String, storyboard: String) -> UIViewController {
+    public static func loadController(ctrlName: String, storyboard: String) -> UIViewController {
         
         let sb = UIStoryboard.init(name: storyboard, bundle: nil)
         return sb.instantiateViewController(withIdentifier: ctrlName)

@@ -10,23 +10,23 @@ import UIKit
 
 
 extension FileManager{
-    public var y_homeDirectory: String {
+    public var homeDirectory: String {
         return NSHomeDirectory()
     }
     
-    public var y_tempDirectory: String {
+    public var tempDirectory: String {
         return NSTemporaryDirectory()
     }
     
-    public var y_documentsDirectory: String {
+    public var documentsDirectory: String {
         return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     }
     
-    public var y_libraryDirectory: String {
+    public var libraryDirectory: String {
         return NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
     }
     
-    public var y_cacheDirectory: String {
+    public var cacheDirectory: String {
         return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
     }
     

@@ -18,13 +18,13 @@ extension UINavigationController{
         }
     }
 
-   public func y_translucentNavigationbar() -> Void {
+   public func translucentNavigationbar() -> Void {
         navigationBar.isTranslucent = true
-        navigationBar.setBackgroundImage(UIImage.y_imageWithColor(UIColor.clear), for: UIBarMetrics.default)
+        navigationBar.setBackgroundImage(UIImage.imageWithColor(UIColor.clear), for: UIBarMetrics.default)
         navigationBar.shadowImage = UIImage()
     }
     
-    public func y_displayNavigationbar() -> Void {
+    public func displayNavigationbar() -> Void {
         navigationBar.isTranslucent = false
     }
     
@@ -36,7 +36,7 @@ extension UINavigationController{
 
 extension UINavigationController{
     
-    public func y_NavPop(level: Int, animated: Bool)->([UIViewController]?){
+    public func NavPop(level: Int, animated: Bool)->([UIViewController]?){
         let ctrlsCount = viewControllers.count
         if ctrlsCount > level {
             let viewCtrl = viewControllers[(ctrlsCount - level - 1)]
@@ -46,8 +46,8 @@ extension UINavigationController{
         }
     }
     
-    public func y_NavFindCtrl(ctrlName: String) -> UIViewController? {
-        if let tagetCtrl = NSClassFromString(UIDevice.y_bundleName + "." + ctrlName) {
+    public func NavFindCtrl(ctrlName: String) -> UIViewController? {
+        if let tagetCtrl = NSClassFromString(UIDevice.bundleName + "." + ctrlName) {
             for ctrl in viewControllers {
                 if(ctrl.isKind(of: tagetCtrl)){
                     return ctrl
@@ -58,8 +58,8 @@ extension UINavigationController{
         return nil
     }
     
-    public func y_NavPopToCtrl(ctrlName: String, animated: Bool = true ) -> [UIViewController]? {
-        if let targetCtrl = y_NavFindCtrl(ctrlName: ctrlName) {
+    public func NavPopToCtrl(ctrlName: String, animated: Bool = true ) -> [UIViewController]? {
+        if let targetCtrl = NavFindCtrl(ctrlName: ctrlName) {
             return popToViewController(targetCtrl, animated: animated)
         }else{
             return nil

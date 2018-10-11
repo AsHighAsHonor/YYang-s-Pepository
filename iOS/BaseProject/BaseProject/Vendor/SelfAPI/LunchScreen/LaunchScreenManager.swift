@@ -27,7 +27,7 @@ extension LaunchScreenManager{
 
         
         if  launchView  == nil {
-            let ctrl = UIStoryboard.y_loadController(ctrlName: "LaunchScreen", storyboard: "LaunchScreen")
+            let ctrl = UIStoryboard.loadController(ctrlName: "LaunchScreen", storyboard: "LaunchScreen")
             launchView = ctrl.view
             ctrl.view.tag = kScrrenTag
             window??.addSubview(ctrl.view)

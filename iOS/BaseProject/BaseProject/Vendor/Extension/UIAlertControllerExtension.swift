@@ -12,7 +12,7 @@ import UIKit
 public extension UIAlertController{
     
 
-    public static func y_simpleAlert(title: String?, message: String?, ctrl: UIViewController, yesTitle: String = "Yes", cancelTitle: String = "No", yesHandler: ((UIAlertAction)-> Void)?, cancelHandler:((UIAlertAction)-> Void)?) -> Void {
+    public static func simpleAlert(title: String?, message: String?, ctrl: UIViewController, yesTitle: String = "Yes", cancelTitle: String = "No", yesHandler: ((UIAlertAction)-> Void)?, cancelHandler:((UIAlertAction)-> Void)?) -> Void {
 
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let act1 = UIAlertAction(title: yesTitle, style: .default, handler: yesHandler)
@@ -22,7 +22,7 @@ public extension UIAlertController{
         ctrl.present(alert, animated: true, completion: nil)
     }
     
-    public static func y_alert(title: String?, message: String?, ctrl: UIViewController, actions: [UIAlertAction]) -> Void {
+    public static func alert(title: String?, message: String?, ctrl: UIViewController, actions: [UIAlertAction]) -> Void {
         
         let alert  = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for act in actions {
@@ -33,7 +33,7 @@ public extension UIAlertController{
     
     
     
-    public static func y_sheet(title: String?, message: String?, ctrl: UIViewController, actions: [UIAlertAction], cancelTitle: String = "No", cancelHandler:((UIAlertAction)-> Void)?) -> Void {
+    public static func sheet(title: String?, message: String?, ctrl: UIViewController, actions: [UIAlertAction], cancelTitle: String = "No", cancelHandler:((UIAlertAction)-> Void)?) -> Void {
 
         let alert  = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         for act in actions {
@@ -44,7 +44,7 @@ public extension UIAlertController{
         ctrl.present(alert, animated: true, completion: nil)
     }
     
-    public static func y_textField(title: String?, message: String?, ctrl: UIViewController, yesTitle: String = "Yes", cancelTitle: String = "No", yesHandler: @escaping ((UIAlertAction, UIAlertController)-> Void), cancelHandler:@escaping ((UIAlertAction, UIAlertController)-> Void)) -> Void {
+    public static func textField(title: String?, message: String?, ctrl: UIViewController, yesTitle: String = "Yes", cancelTitle: String = "No", yesHandler: @escaping ((UIAlertAction, UIAlertController)-> Void), cancelHandler:@escaping ((UIAlertAction, UIAlertController)-> Void)) -> Void {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addTextField { aler in

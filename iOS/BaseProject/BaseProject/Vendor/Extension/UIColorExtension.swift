@@ -28,7 +28,7 @@ public extension UIColor{
     }
     
     
-    public func y_toHexString() -> String {
+    public func toHexString() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
         var b:CGFloat = 0
@@ -38,7 +38,7 @@ public extension UIColor{
         return String(format:"#%06x", rgb)
     }
 
-    public class func y_random() -> UIColor {
+    public class func random() -> UIColor {
         let r = CGFloat(Double(arc4random() % 255) / 255.0)
         let g = CGFloat(Double(arc4random() % 255) / 255.0)
         let b = CGFloat(Double(arc4random() % 255) / 255.0)

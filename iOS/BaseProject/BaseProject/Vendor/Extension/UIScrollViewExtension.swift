@@ -10,11 +10,11 @@ import UIKit
 
 
 extension UIScrollView{
-    public func y_scrollToTop(animated: Bool = true) {
+    public func scrollToTop(animated: Bool = true) {
         setContentOffset(CGPoint.zero, animated: animated)
     }
     
-    public func y_scrollToBottom(animated: Bool = true) {
+    public func scrollToBottom(animated: Bool = true) {
         let bottomOffset = CGPoint(x: 0, y: contentSize.height - bounds.height)
         if bottomOffset.y > 0 {
             setContentOffset(bottomOffset, animated: animated)

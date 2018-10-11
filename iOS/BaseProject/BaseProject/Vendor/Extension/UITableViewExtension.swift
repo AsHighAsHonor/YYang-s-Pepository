@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITableView {
-    public func y_relayoutHeaderView() -> Void {
+    public func relayoutHeaderView() -> Void {
         let height = tableHeaderView?.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
         var headerFrame = tableHeaderView?.frame
         headerFrame?.size.height = height!

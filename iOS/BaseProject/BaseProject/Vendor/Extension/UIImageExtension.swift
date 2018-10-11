@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIImage{
     
-    public class func y_imageWithColor(_ color: UIColor, width: CGFloat = 1.0, height: CGFloat = 1.0) -> UIImage? {
+    public class func imageWithColor(_ color: UIColor, width: CGFloat = 1.0, height: CGFloat = 1.0) -> UIImage? {
         
         var image: UIImage?
         
