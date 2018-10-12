@@ -16,9 +16,9 @@ class DoubanCodable: Codable {
 
 class ChannelCodable: Codable {
     var nameEn : String?
-    var seqId : String?
+    var seqId : Int?
     var abbrEn : String?
     var name : String?
-    var channelId : String?
+    var channelId : Int?
 
 }

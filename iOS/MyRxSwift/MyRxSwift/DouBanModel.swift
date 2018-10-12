@@ -27,7 +27,7 @@ class Douban: Mappable {
 class Channel: Mappable {
     var name: String?
     var nameEn:String?
-    var channelId: String?
+    var channelId: Int?
     var seqId: Int?
     var abbrEn: String?
     

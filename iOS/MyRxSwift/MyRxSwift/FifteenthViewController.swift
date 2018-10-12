@@ -7,61 +7,64 @@
 //
 
 import UIKit
-enum MyError: Error {
-    case A
-    case B
-}
+import Moya
 
 
 class FifteenthViewController: UIViewController {
-    let disposeBag = DisposeBag()
+    let bag = DisposeBag()
 
+    @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var passwordTipLabel: UILabel!
+    @IBOutlet weak var nameTipLabel: UILabel!
+    
+    @IBOutlet weak var loginBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let  publish = PublishSubject<String>()
         
-//        当遇到 error 事件的时候，就返回指定的值，然后结束。
-//        publish.catchErrorJustReturn("This is an error")
-//            .subscribe(onNext: {print($0)})
-//            .disposed(by: disposeBag)
-//
-
-//        该方法可以捕获 error，并对其进行处理。
-//        同时还能返回另一个 Observable 序列进行订阅（切换到新的序列）。
-//        publish.catchError { (error) -> Observable<String> in
-//            print("CatchError:\(error)")
-//                return Observable.of("show alert")
-//            }
-//            .subscribe(onNext: {print($0)})
-//            .disposed(by: disposeBag)
-//
-//        publish.onNext("A")
-//        publish.onNext("B")
-//        publish.onNext("C")
-//        publish.onError(MyError.A)
-//        publish.onNext("D")
+        let nameObservable = nameTextfield.rx.text.orEmpty.asObservable()
+            .map {
+                (6 > $0.count && $0.count > 0)
+        }
+    
+        let pwdObservable = passwordTextField.rx.text.orEmpty.asObservable()
+            .map {
+                (6 > $0.count && $0.count > 0)
+        }
+        
+        nameObservable.bind(to: self.nameTipLabel.rx.isHidden).disposed(by: bag)
+        pwdObservable.bind(to: self.passwordTipLabel.rx.isHidden).disposed(by: bag)
         
         
-        let url = URL(string: "https://www.douban.com/j/app/radio/channels")
+        Observable.combineLatest(nameObservable, pwdObservable) { ($0 && $1) }
+            .bind(to: self.loginBtn.rx.isEnabled)
+            .disposed(by: bag)
         
-        request(.get, url!)
-            .data()
-            .subscribe(onNext: { (data) in
-                let str = String(data: data, encoding: String.Encoding.utf8)
-                print("返回的数据是：", str ?? "")
-            }, onError: { (error) in
-                print(error)
-            }, onCompleted: {
-                print("completed")
-            }, onDisposed: {
-                print("disposed")
-            })
-            .disposed(by: disposeBag)
-     
-
+        
+        loginBtn.rx.tap.asObservable()
+            .throttle(0.5, scheduler: MainScheduler.instance)
+            .flatMap {
+                Observable.just((self.nameTextfield.text,self.passwordTextField.text))
+            }.subscribe(onNext: {
+                print($0.0!, $0.1!)
+                self.request()
+            }).disposed(by: bag)
+        
+        
         
     }
+    
+    
+    func request() {
+        let provider = MoyaProvider<MyApi>()
+        provider.request(.Show) { (result) in
+            print(result)
+        }
+        
+    }
+    
     
 
 }
