@@ -43,6 +43,7 @@
 		7520A81E163862C1095D41D8 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		919DCF8CB2A5E9B944499F0D /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B95E6B90BC10ED34348F61F9 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB27253F2174077F0042FB94 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		CB3A7E4A2149F21E00B41A99 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		CB3A7E4D214A06DB00B41A99 /* BaseTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBar.swift; sourceTree = "<group>"; };
 		CB70083D21489BB300D5DA92 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 		FD7532A321440A4600FB5E10 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				CB27253F2174077F0042FB94 /* FontAwesome.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -292,6 +294,7 @@
 				FD7532862143DADD00FB5E10 /* Frameworks */,
 				FD7532872143DADD00FB5E10 /* Resources */,
 				7E36CEBAFC8D7DCCC27DCEBE /* [CP] Embed Pods Frameworks */,
+				CB272540217409700042FB94 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -381,6 +384,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CB272540217409700042FB94 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 000000\ncbb773d3a5407236aa1545abbd4e50cb307e1ad4e113a228e29aa479aa8abf86\n";
 		};
 		E1039FD2B098F4CC1D4408FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

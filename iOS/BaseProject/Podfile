@@ -14,6 +14,8 @@ target 'BaseProject' do
   pod 'JGProgressHUD'
   pod 'NVActivityIndicatorView'
   pod 'IQKeyboardManagerSwift'
-
+  
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end
