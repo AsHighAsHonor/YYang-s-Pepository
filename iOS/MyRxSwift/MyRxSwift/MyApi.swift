@@ -6,7 +6,6 @@
 //  Copyright © 2018 Drag. All rights reserved.
 //
 
-import Foundation
 import Moya
 import UIKit
 
