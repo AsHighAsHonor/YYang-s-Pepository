@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CB272522216F28750042FB94 /* DouBanCodableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB272521216F28750042FB94 /* DouBanCodableModel.swift */; };
-		CB27252521706DBF0042FB94 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27252421706DBF0042FB94 /* Operators.swift */; };
 		CB27253D21707A6B0042FB94 /* MyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27253C21707A6B0042FB94 /* MyApi.swift */; };
 		CB58E16621630F1500AB8BEA /* RxObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58E16521630F1500AB8BEA /* RxObjectMapper.swift */; };
 		CB58E16821630F6E00AB8BEA /* DouBanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58E16721630F6E00AB8BEA /* DouBanModel.swift */; };
@@ -29,7 +28,6 @@
 		B6E8331C38EF3A841FB397B9 /* Pods_MyRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C5B3D898B033C6E59196B5 /* Pods-MyRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRxSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRxSwift/Pods-MyRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		CB272521216F28750042FB94 /* DouBanCodableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanCodableModel.swift; sourceTree = "<group>"; };
-		CB27252421706DBF0042FB94 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = "../../../../../BOOK/RxSwift/RxSwift-master/RxExample/RxExample/Operators.swift"; sourceTree = "<group>"; };
 		CB27253C21707A6B0042FB94 /* MyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApi.swift; sourceTree = "<group>"; };
 		CB58E16521630F1500AB8BEA /* RxObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxObjectMapper.swift; sourceTree = "<group>"; };
 		CB58E16721630F6E00AB8BEA /* DouBanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanModel.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 		CB5902DC215A12B80041DA39 /* MyRxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				CB27252421706DBF0042FB94 /* Operators.swift */,
 				CB5902DD215A12B80041DA39 /* AppDelegate.swift */,
 				CB5902DF215A12B80041DA39 /* ViewController.swift */,
 				CB5902E1215A12B80041DA39 /* Main.storyboard */,
@@ -244,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB71D048215B4D890094D2F8 /* FifteenthViewController.swift in Sources */,
-				CB27252521706DBF0042FB94 /* Operators.swift in Sources */,
 				CB5902E0215A12B80041DA39 /* ViewController.swift in Sources */,
 				CB5902F2215B22930041DA39 /* SwiftPchFile.swift in Sources */,
 				CB5902F0215B20FC0041DA39 /* SevenViewController.swift in Sources */,
