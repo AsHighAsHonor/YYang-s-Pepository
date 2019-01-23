@@ -6,4 +6,15 @@
 //  Copyright © 2019 Drag. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+struct AppCoordinator {
+    let window: UIWindow
+    
+    func lunch() {
+        TabbarCoordinator(win: window).start()
+    }
+    
+    
+}
