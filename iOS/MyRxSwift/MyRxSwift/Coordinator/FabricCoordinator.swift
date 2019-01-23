@@ -7,17 +7,21 @@
 
 import UIKit
 
-struct FabricCoordinator {
+class FabricCoordinator {
     let navCtrl: UINavigationController
+    
     
     init(nav: UINavigationController) {
         navCtrl = nav
     }
     
     func start() {
-        let f = FabricViewController()
-        navCtrl.pushViewController(f, animated: true)
+        let fabric = FabricViewController()
+        navCtrl.pushViewController(fabric, animated: true)
     }
     
+    deinit {
+        print("dealloc FabricCoordinator")
+    }
     
 }

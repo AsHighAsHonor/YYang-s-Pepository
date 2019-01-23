@@ -11,26 +11,28 @@ import UIKit
 class FirstCoordinator {
     let navigationController: UINavigationController
     let bag = DisposeBag()
-    let vm = FirstViewModel()
     
-    lazy var file : FileCoordinator = {
-        var f = FileCoordinator(nav: self.navigationController)
-        return f
-    }()
+    
 
     init() {
         let first = FirstViewController()
+        let vm = FirstViewModel()
         first.vm = vm
         self.navigationController = UINavigationController(rootViewController: first)
         
         vm.output?.subscribe(onNext: {
             print($0)
-            self.file.start()
+            let f = FileCoordinator(nav: self.navigationController)
+            f.start()
         }).disposed(by: bag)
     }
     
 
     
+
+    deinit {
+        print("dealloc FirstCoordinator")
+    }
     
     
 }

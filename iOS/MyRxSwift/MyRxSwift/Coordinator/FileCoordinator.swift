@@ -10,29 +10,31 @@ import UIKit
 
 class FileCoordinator {
     var navCtrl: UINavigationController
-    let vm = FileViewModel()
+
     let bag = DisposeBag()
-    lazy var fabric : FabricCoordinator = {
-        let f = FabricCoordinator(nav: self.navCtrl)
-        return f
-    }()
+
+    
     init(nav: UINavigationController) {
         navCtrl = nav
     }
     
     func start()  {
         let file = FileViewController()
+        let vm = FileViewModel()
         file.vm = vm
         vm.output?.subscribe(onNext: {
             print($0)
-            self.fabric.start()
+            let f = FabricCoordinator(nav: self.navCtrl)
+            f.start()
         }).disposed(by: bag)
         
         navCtrl.pushViewController(file, animated: true)
     }
     
     
-    
+    deinit {
+        print("dealloc FileCoordinator")
+    }
     
     
 }
