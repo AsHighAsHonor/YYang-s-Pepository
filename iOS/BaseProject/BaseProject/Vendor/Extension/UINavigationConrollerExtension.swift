@@ -9,12 +9,12 @@
 import UIKit
 
 
- // MARK: - NavigationBar
+ // MARK: - NavigationBar/TabBar
 extension UINavigationController{
     
-    open override var childViewControllerForStatusBarStyle : UIViewController{
+    open override var childForStatusBarStyle : UIViewController{
         get{
-            return topViewController!
+            return topViewController ?? UIViewController()
         }
     }
 
@@ -28,6 +28,22 @@ extension UINavigationController{
         navigationBar.isTranslucent = false
     }
     
+    public func pushCtrl(_ viewController: UIViewController, animated: Bool = true , hideBottomBar: Bool = false){
+        viewController.hidesBottomBarWhenPushed = hideBottomBar
+        pushViewController(viewController, animated: animated)
+    }
+    
+    public func hideNavigationBarUnderLine(hidden: Bool = true) {
+        navigationBar.setBackgroundImage((hidden ? UIImage(): nil), for: .default)
+        navigationBar.shadowImage = (hidden ? UIImage(): nil)
+    }
+    
+    public func setNavigationBarUnderlineColor(color: UIColor) {
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage.imageWithColor(color)
+    }
+
+    
     
 }
 
@@ -36,7 +52,7 @@ extension UINavigationController{
 
 extension UINavigationController{
     
-    public func NavPop(level: Int, animated: Bool)->([UIViewController]?){
+    public func navPop(level: Int, animated: Bool)->([UIViewController]?){
         let ctrlsCount = viewControllers.count
         if ctrlsCount > level {
             let viewCtrl = viewControllers[(ctrlsCount - level - 1)]
@@ -46,7 +62,7 @@ extension UINavigationController{
         }
     }
     
-    public func NavFindCtrl(ctrlName: String) -> UIViewController? {
+    public func navFindCtrl(ctrlName: String) -> UIViewController? {
         if let tagetCtrl = NSClassFromString(UIDevice.bundleName + "." + ctrlName) {
             for ctrl in viewControllers {
                 if(ctrl.isKind(of: tagetCtrl)){
@@ -58,8 +74,8 @@ extension UINavigationController{
         return nil
     }
     
-    public func NavPopToCtrl(ctrlName: String, animated: Bool = true ) -> [UIViewController]? {
-        if let targetCtrl = NavFindCtrl(ctrlName: ctrlName) {
+    public func navPopToCtrl(ctrlName: String, animated: Bool = true ) -> [UIViewController]? {
+        if let targetCtrl = navFindCtrl(ctrlName: ctrlName) {
             return popToViewController(targetCtrl, animated: animated)
         }else{
             return nil

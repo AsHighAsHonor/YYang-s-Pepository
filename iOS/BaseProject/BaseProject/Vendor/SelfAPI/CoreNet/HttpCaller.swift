@@ -20,7 +20,7 @@ private let SERVER_ADDRESS =  "http://10.0.0.4:3000/api/v1/"//YY
 
 
 
-class HttpCaller: NSObject {
+class HttpCaller {
     
     
     
@@ -129,17 +129,6 @@ class HttpCaller: NSObject {
         return headers;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 
 }

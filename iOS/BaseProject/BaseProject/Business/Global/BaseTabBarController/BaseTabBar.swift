@@ -26,7 +26,7 @@ class BaseTabBar: UITabBar {
 
     private lazy var centerBtn : UIButton = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: centerBtnWidth, height: centerBtnHeight))
-        btn.setBackgroundColor(color: UIColor.red, state: .normal)
+        btn.backgroundColor = .red
         btn.titleLabel?.text = "PLUS"
 //        btn.addTarget(self, action: Selector(("centerBtnClicked")), for:.touchUpInside)    // swift 中的 target-action2种写法   1.Selector通过字符串 2. 使用#selector
         btn.addTarget(self, action: #selector(centerBtnClicked(btn:)) , for:.touchUpInside)
@@ -73,7 +73,7 @@ class BaseTabBar: UITabBar {
             frame.size.width = barItemWidth
             view.frame = frame
         }
-        bringSubview(toFront: centerBtn)
+        bringSubviewToFront(centerBtn)
         
     }
     

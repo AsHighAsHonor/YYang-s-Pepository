@@ -31,7 +31,7 @@ extension LaunchScreenManager{
             launchView = ctrl.view
             ctrl.view.tag = kScrrenTag
             window??.addSubview(ctrl.view)
-            window??.bringSubview(toFront: ctrl.view)
+            window??.bringSubviewToFront(ctrl.view)
         }
 
         UIView.animate(withDuration: duraton, delay: delay, options: .curveEaseInOut, animations: {

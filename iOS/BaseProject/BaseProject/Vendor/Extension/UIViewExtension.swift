@@ -13,17 +13,19 @@ import UIKit
 extension UIView{
     
     public func addTapGesture(target: Any, selector: Selector, enableInteraction: Bool = true) -> Void {
-        let tap = UITapGestureRecognizer(target: tag, action: selector)
+        let tap = UITapGestureRecognizer(target: target, action: selector)
         tap.numberOfTapsRequired = 1
         isUserInteractionEnabled = enableInteraction
-        self.addGestureRecognizer(tap)
+        addGestureRecognizer(tap)
     }
 }
 
 
 extension UIView{
-    public func setCornerRadius(_ v: CGFloat) {
-        layer.cornerRadius = v
+    public func setCorner(radius: CGFloat = 0, borderColor: UIColor = UIColor.clear, borderWidth: CGFloat = 0) {
+        layer.cornerRadius = radius
+        layer.borderColor = borderColor.cgColor
+        layer.borderWidth = borderWidth
         layer.masksToBounds = true
     }
     
