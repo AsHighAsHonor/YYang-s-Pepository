@@ -1,0 +1,88 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
+  - Alamofire (4.8.1)
+  - Differentiator (3.1.0)
+  - FontAwesome.swift (1.5.0)
+  - IQKeyboardManagerSwift (6.1.1)
+  - JGProgressHUD (2.0.3)
+  - Kingfisher (4.8.1)
+  - MJRefresh (3.1.15.7)
+  - Moya/Core (11.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (11.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - NVActivityIndicatorView (4.4.1):
+    - NVActivityIndicatorView/Presenter (= 4.4.1)
+  - NVActivityIndicatorView/Presenter (4.4.1)
+  - ObjectMapper (3.4.2)
+  - Result (3.2.4)
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - SnapKit (4.0.1)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - FontAwesome.swift
+  - IQKeyboardManagerSwift
+  - JGProgressHUD
+  - Kingfisher (~> 4.0)
+  - MJRefresh
+  - Moya/RxSwift (~> 11.0)
+  - NVActivityIndicatorView (~> 4.4.0)
+  - ObjectMapper (~> 3.3)
+  - RxCocoa (~> 4.0)
+  - RxDataSources (~> 3.0)
+  - RxSwift (~> 4.0)
+  - SnapKit (~> 4.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
+    - Alamofire
+    - Differentiator
+    - FontAwesome.swift
+    - IQKeyboardManagerSwift
+    - JGProgressHUD
+    - Kingfisher
+    - MJRefresh
+    - Moya
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - Result
+    - RxAtomic
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  FontAwesome.swift: 55291c7a334ffacf9b62793d27c14014ec09a11b
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  NVActivityIndicatorView: f0a6b0ed2973d9544da268f4eb76696f0a9577b0
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+
+PODFILE CHECKSUM: 89c28d4ca7d3e08d627662e3480603cfc8d8de48
+
+COCOAPODS: 1.5.3

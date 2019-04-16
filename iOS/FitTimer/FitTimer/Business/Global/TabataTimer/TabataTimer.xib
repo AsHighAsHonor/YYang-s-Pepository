@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Grind Timber.otf">
+            <string>Grind-Timber</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TabataTimer" customModule="TheBod" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9u-Id-scr">
+                    <rect key="frame" x="0.0" y="78" width="375" height="125"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jT-vu-UCN">
+                            <rect key="frame" x="77.5" y="21.5" width="220" height="82"/>
+                            <fontDescription key="fontDescription" name="Grind-Timber" family="Grind" pointSize="67"/>
+                            <color key="textColor" red="0.32941176470588235" green="0.70588235294117641" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="6Zs-6S-fAH"/>
+                        <constraint firstItem="5jT-vu-UCN" firstAttribute="centerY" secondItem="o9u-Id-scr" secondAttribute="centerY" id="mnn-VJ-LMS"/>
+                        <constraint firstItem="5jT-vu-UCN" firstAttribute="centerX" secondItem="o9u-Id-scr" secondAttribute="centerX" id="yAM-lC-jif"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkv-qj-ipW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-42-L9p">
+                            <rect key="frame" x="15" y="48" width="165" height="30"/>
+                            <state key="normal" title="Complete Session">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcM-Wa-fDY">
+                            <rect key="frame" x="195" y="48" width="165" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Pause Timer">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5L-Uq-zi9">
+                            <rect key="frame" x="0.0" y="17" width="184" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prepare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcF-k8-0pi">
+                            <rect key="frame" x="191.5" y="17" width="183.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="tcM-Wa-fDY" secondAttribute="trailing" constant="15" id="2Bc-xe-7G1"/>
+                        <constraint firstItem="iTu-42-L9p" firstAttribute="leading" secondItem="bkv-qj-ipW" secondAttribute="leading" constant="15" id="5I2-ym-5fy"/>
+                        <constraint firstItem="S5L-Uq-zi9" firstAttribute="leading" secondItem="bkv-qj-ipW" secondAttribute="leading" id="7jd-92-Cdk"/>
+                        <constraint firstItem="iTu-42-L9p" firstAttribute="width" secondItem="bkv-qj-ipW" secondAttribute="width" multiplier="0.44" id="9Qs-wl-Piw"/>
+                        <constraint firstItem="tcM-Wa-fDY" firstAttribute="centerY" secondItem="iTu-42-L9p" secondAttribute="centerY" id="PnZ-1f-JbA"/>
+                        <constraint firstItem="WcF-k8-0pi" firstAttribute="width" secondItem="S5L-Uq-zi9" secondAttribute="width" id="RH5-kB-zDl"/>
+                        <constraint firstItem="tcM-Wa-fDY" firstAttribute="width" secondItem="iTu-42-L9p" secondAttribute="width" id="Tqf-rW-BGG"/>
+                        <constraint firstItem="WcF-k8-0pi" firstAttribute="centerY" secondItem="S5L-Uq-zi9" secondAttribute="centerY" id="f8f-Zv-J3o"/>
+                        <constraint firstItem="S5L-Uq-zi9" firstAttribute="width" secondItem="bkv-qj-ipW" secondAttribute="width" multiplier="0.49" id="jVL-KN-Ybn"/>
+                        <constraint firstAttribute="height" constant="78" id="pXm-tr-ReB"/>
+                        <constraint firstItem="iTu-42-L9p" firstAttribute="top" secondItem="S5L-Uq-zi9" secondAttribute="bottom" constant="10" id="ySY-c3-gUF"/>
+                        <constraint firstAttribute="trailing" secondItem="WcF-k8-0pi" secondAttribute="trailing" id="zSk-8n-YVJ"/>
+                        <constraint firstAttribute="bottom" secondItem="iTu-42-L9p" secondAttribute="bottom" id="zv0-6m-d5p"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="o9u-Id-scr" secondAttribute="bottom" id="0af-vD-RYt"/>
+                <constraint firstItem="bkv-qj-ipW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5XZ-ck-Hjy"/>
+                <constraint firstItem="bkv-qj-ipW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CLc-HQ-Acd"/>
+                <constraint firstItem="o9u-Id-scr" firstAttribute="top" secondItem="bkv-qj-ipW" secondAttribute="bottom" id="Fyr-O0-Tz5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="o9u-Id-scr" secondAttribute="trailing" id="IuZ-lb-rQL"/>
+                <constraint firstItem="o9u-Id-scr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mZd-1y-bks"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bkv-qj-ipW" secondAttribute="trailing" id="nqo-sH-2jj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="completeButton" destination="iTu-42-L9p" id="S9i-cI-XiD"/>
+                <outlet property="pauseButton" destination="tcM-Wa-fDY" id="yy1-MA-a5n"/>
+                <outlet property="roundLabel" destination="S5L-Uq-zi9" id="gum-Hu-JuC"/>
+                <outlet property="statusLabel" destination="WcF-k8-0pi" id="8QU-kf-aHr"/>
+                <outlet property="timerLabel" destination="5jT-vu-UCN" id="nYP-95-Bka"/>
+            </connections>
+            <point key="canvasLocation" x="-2" y="-106"/>
+        </view>
+    </objects>
+</document>
