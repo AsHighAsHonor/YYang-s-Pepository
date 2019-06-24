@@ -1,9 +1,9 @@
 //
 //  MoyaResoponse+Toast.swift
-//  TheBod
+//  
 //
 //  Created by YYang1 on 21/11/18.
-//  Copyright © 2018 PixelForceSystems. All rights reserved.
+//  
 //
 
 import Foundation
@@ -40,7 +40,7 @@ public extension PrimitiveSequence where TraitType == SingleTrait, ElementType =
         guard let rootView = UIApplication.shared.keyWindow?.rootViewController?.view else { return }
         guard let urlStr = response.request?.url?.absoluteString else{ return }
         if response.statusCode == 409{
-            HudManager.shared.showToast(message: "Your subscription is currently tied to an existing TheBod account.", in: rootView, delay: 5)
+            HudManager.shared.showToast(message: "Your subscription is currently tied to an existing  account.", in: rootView, delay: 5)
             
         }else if response.statusCode == 406{
             if urlStr.contains("exercise") || urlStr.contains("workout"){

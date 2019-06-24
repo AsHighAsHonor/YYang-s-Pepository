@@ -1,9 +1,9 @@
 //
-//  TheBod-PrefixHeader.swift
+//  -PrefixHeader.swift
 //  FitTimer
 //
 //  Created by YYang on 8/9/18.
-//  Copyright © 2018 TheBod. All rights reserved.
+//  Copyright © 2018 . All rights reserved.
 //
 
 import Foundation

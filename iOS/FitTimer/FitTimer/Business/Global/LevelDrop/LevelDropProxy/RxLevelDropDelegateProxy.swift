@@ -1,9 +1,9 @@
 //
 //  RxLevelDropDelegateProxy.swift
-//  TheBod
+//  
 //
 //  Created by YYang1 on 13/11/18.
-//  Copyright © 2018 PixelForceSystems. All rights reserved.
+//  
 //
 
 import Foundation

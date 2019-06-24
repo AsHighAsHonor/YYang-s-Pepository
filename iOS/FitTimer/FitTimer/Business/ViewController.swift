@@ -7,45 +7,24 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
+    lazy var tabataTimer : TabataTimer = {
+        let t = TabataTimer.loadNibView()
+        t.configure(round: 5, prepareInterval: 5, workInterval: 10, restInterval: 3)
+        view.addSubview(t)
+        t.snp.makeConstraints({
+            $0.top.equalToSuperview()
+            $0.left.right.equalToSuperview()
+        })
+        return t
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        HttpCaller.postAsyn(params: ["email" : "aaa@gmail.com","password" : "12345678"], method: "users/sign-in", success: {
-//            print($0)
-//        }) {
-//            print($0)
-//            print($1)
-//        }
-        
-//        HttpCaller.getAsyn(params:nil, method: "branches", success: {
-//           print($0)
-//        }) {
-//           print($0)
-//           print($1)
-//        }
-        
-//        HttpCaller.putAsyn(params: nil, method: "", success: {
-//            print($0)
-//        }) {
-//            print($0)
-//            print($1)
-//        }
-        
-//        HttpCaller.deleteAsyn(params: nil, method: "cart", success: {
-//            print($0)
-//        }) {
-//            print($0)
-//            print($1)
-//        }
-        
-//        YYLog(message: HEX_COLOR(0xff00ff))
-//        _ =  UIColor.init(hexString: 0x00000, alpha: 1)
-//        _ = UIColor.y_random()`
-//        YYLog(String.y_currentTime)
-        
+        tabataTimer.start()
 
     }
 

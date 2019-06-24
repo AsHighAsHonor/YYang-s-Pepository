@@ -1,9 +1,9 @@
 //
 //  ViewModelType.swift
-//  TheBod
+//  
 //
 //  Created by YYang on 17/11/18.
-//  Copyright © 2018 PixelForceSystems. All rights reserved.
+//  
 //
 
 import Foundation

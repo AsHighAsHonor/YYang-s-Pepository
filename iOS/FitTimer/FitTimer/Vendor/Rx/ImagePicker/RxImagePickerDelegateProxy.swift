@@ -1,9 +1,9 @@
 //
 //  UIImagePickerDelegateProxy.swift
-//  TheBod
+//
 //
 //  Created by YYang1 on 17/12/18.
-//  Copyright © 2018 PixelForceSystems. All rights reserved.
+//
 //
 
 import RxCocoa

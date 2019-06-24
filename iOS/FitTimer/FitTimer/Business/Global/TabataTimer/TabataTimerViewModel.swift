@@ -1,60 +1,51 @@
 //
 //  TabataTimerViewModel.swift
-//  TheBod
+//  
 //
 //  Created by YYang1 on 1/11/18.
-//  Copyright © 2018 PixelForceSystems. All rights reserved.
+//  
 //
 
 import Foundation
 
-//round
-//phase(Prepare, Work, Rest) x perTime
-//Status(suspended,resumed,none,done)
-
-typealias PhaseInfo = (timer: String?, phaseColor: UIColor?, round: String?, phaseTitle: String?, tabataStatus: TabataStauts)
-
-enum TabataPhase {
-    case prepare(phaseColor: UIColor, phaseTitle: String)
-    case work(phaseColor: UIColor, phaseTitle: String)
-    case rest(phaseColor: UIColor, phaseTitle: String)
-}
-
-enum TabataStauts: String {
-    case suspended = "Resume Timer"
-    case resumed = "Pause Timer"
-    case none = "Start"
-    case done = "Restart"
-}
-
 
 class TabataTimerViewModel {
     
+    //round
+    //phase(Prepare, Work, Rest) x perTime
+    //Status(suspended,resumed,none,done)
+    enum TabataPhase {
+        case prepare(phaseColor: UIColor, phaseTitle: String)
+        case work(phaseColor: UIColor, phaseTitle: String)
+        case rest(phaseColor: UIColor, phaseTitle: String)
+    }
+    
+    enum TabataStauts: String {
+        case suspended = "Resume Timer"
+        case resumed = "Pause Timer"
+        case none = "Start"
+        case done = "Restart"
+    }
+    
+    typealias PhaseInfo = (timer: String?, phaseColor: UIColor?, round: String?, phaseTitle: String?, tabataStatus: TabataStauts)
     fileprivate var timerStatus = TabataStauts.resumed
-    
     fileprivate var timerPhase = TabataPhase.prepare(phaseColor: .yellow, phaseTitle: "Prepare")
-    
     fileprivate var timer: DispatchSourceTimer?
-    
-    fileprivate var currentTap: Int
-    
-    fileprivate var numberOfTap: Int
-    
+    fileprivate var currentRound: Int
+    fileprivate var numberOfRound: Int
     fileprivate var pTime: Int
     fileprivate var rTime: Int
     fileprivate var wTime: Int
+    fileprivate let bag = DisposeBag()
+    fileprivate var round: String{
+        return "\(self.currentRound)/\(self.numberOfRound)"
+    }
     
-    let bag = DisposeBag()
     
-    // MARK: - OutPut{
     let configurePhase: Observable<PhaseInfo>
-
-//}
-    
-    
     
     init(input:(
-        numberOfGround: Int,
+        numberOfRound: Int,
         prepareTime: Int,
         workTime: Int,
         restTime: Int,
@@ -62,9 +53,9 @@ class TabataTimerViewModel {
         PauseTap: Observable<Void>
         ) ) {
         
-
-        numberOfTap = input.numberOfGround
-        currentTap = 1
+        
+        numberOfRound = input.numberOfRound
+        currentRound = 1
         
         wTime = input.workTime
         rTime = input.restTime
@@ -73,7 +64,7 @@ class TabataTimerViewModel {
         let configureSubject = PublishSubject<PhaseInfo>()
         configurePhase = configureSubject.asObservable()
         startTimer(subject: configureSubject)
-
+        
         input.PauseTap.subscribe(onNext: {
             switch self.timerStatus{
             case .suspended:
@@ -83,7 +74,7 @@ class TabataTimerViewModel {
             case .none:
                 self.startTimer(subject: configureSubject)
             case .done:
-                self.currentTap = 1
+                self.currentRound = 1
                 self.timerPhase = .work(phaseColor: .green, phaseTitle: "Work")
                 self.timerStatus = .resumed
                 self.startTimer(subject: configureSubject)
@@ -93,21 +84,20 @@ class TabataTimerViewModel {
         input.completeTap.subscribe(onNext: {
             self.endTimer(subject: configureSubject)
         }).disposed(by: bag)
-
-   
+        
+        
     }
     
     deinit {
         timer?.setEventHandler {}
         timer?.cancel()
-        print("deinit timer source")
     }
     
     
 }
 
 extension TabataTimerViewModel{
-
+    
     func startTimer(subject: PublishSubject<PhaseInfo>) {
         var total = 0
         switch self.timerPhase{
@@ -128,11 +118,11 @@ extension TabataTimerViewModel{
                 YYLog("\(self.timerPhase)-----\(total)")
                 switch self.timerPhase{
                 case .prepare(let color, let title):
-                    subject.onNext((String(total).secStrToMinSec(), color, "\(self.currentTap)/\(self.numberOfTap)", title, self.timerStatus))
+                    subject.onNext((String(total).secStrToMinSec(), color, self.round, title, self.timerStatus))
                 case .work(let color, let title):
-                    subject.onNext((String(total).secStrToMinSec(), color, "\(self.currentTap)/\(self.numberOfTap)", title, self.timerStatus))
+                    subject.onNext((String(total).secStrToMinSec(), color, self.round, title, self.timerStatus))
                 case .rest(let color, let title):
-                    subject.onNext((String(total).secStrToMinSec(), color, "\(self.currentTap)/\(self.numberOfTap)", title, self.timerStatus))
+                    subject.onNext((String(total).secStrToMinSec(), color, self.round, title, self.timerStatus))
                 }
             }
             if total <= 0 {
@@ -146,15 +136,15 @@ extension TabataTimerViewModel{
                     self.timerPhase = .rest(phaseColor: .red, phaseTitle: "Rest")
                     self.startTimer(subject: subject)
                 case .rest:
-                    if self.currentTap == self.numberOfTap{
+                    if self.currentRound == self.numberOfRound{
                         self.endTimer(subject: subject)
                     }else{
                         self.timerPhase = .work(phaseColor: .green, phaseTitle: "Work")
                         self.startTimer(subject: subject)
-                         self.currentTap += 1
+                        self.currentRound += 1
                     }
                 }
-
+                
             }
         }
         timer?.resume()
@@ -177,7 +167,7 @@ extension TabataTimerViewModel{
         DispatchQueue.main.async {
             self.timer?.cancel()
             self.timerStatus = .done
-            subject.onNext(("Done", .yellow, "\(self.currentTap)/\(self.numberOfTap)", "Prepare", self.timerStatus))
+            subject.onNext(("Done", .yellow, self.round, "Prepare", self.timerStatus))
         }
     }
     

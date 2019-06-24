@@ -1,6 +1,6 @@
 //
 //  StorePurchaseManager.swift
-//  TheBod
+//  
 //
 //  Created by YYang1 on 5/2/19.
 //  Copyright © 2019 PixelForceSystems. All rights reserved.

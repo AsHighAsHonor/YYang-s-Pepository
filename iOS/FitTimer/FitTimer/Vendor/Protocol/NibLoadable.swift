@@ -1,9 +1,9 @@
 //
 //  LoadableNibType.swift
-//  TheBod
+//  
 //
 //  Created by YYang1 on 19/10/18.
-//  Copyright © 2018 PixelForceSystems. All rights reserved.
+//  
 //
 
 import UIKit

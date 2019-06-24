@@ -1,67 +1,59 @@
 //
 //  TabataTimer.swift
-//  TheBod
+//  
 //
 //  Created by YYang1 on 1/11/18.
-//  Copyright © 2018 PixelForceSystems. All rights reserved.
+//  
 //
 
 import UIKit
 
 class TabataTimer: UIView, NibLoadable {
-
-    let bag = DisposeBag()
+    
+    fileprivate let bag = DisposeBag()
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
+    fileprivate var pTime: Int?
+    fileprivate var rTime: Int?
+    fileprivate var wTime: Int?
+    fileprivate var tTound: Int?
     
     var viewModel: TabataTimerViewModel?
-    
     var completeClicked: Observable<Void>{
         return completeButton.rx.tap.asObservable().flatMapLatest({ (_) -> Observable<Void> in
             self.removeFromSuperview()
             return Observable.just(())
         })
     }
-
     
-    fileprivate var pTime: Int?
-    fileprivate var rTime: Int?
-    fileprivate var wTime: Int?
-    fileprivate var tTound: Int?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         statusLabel.textColor = .white
-        statusLabel.font = FONT_20
         
         roundLabel.textColor = .white
-        roundLabel.font = FONT_20
         
         timerLabel.textColor = .yellow
-        timerLabel.font = UIFont.systemFont(ofSize: 65)
         
         pauseButton.setTitleColor(.black, for: .normal)
-        pauseButton.titleLabel?.font = FONT_14
         pauseButton.layer.cornerRadius = 15
         pauseButton.layer.masksToBounds = true
         
         completeButton.setTitleColor(.white, for: .normal)
-        completeButton.titleLabel?.font = FONT_14
         completeButton.layer.borderColor = UIColor.white.cgColor
         completeButton.layer.borderWidth = 1
         completeButton.layer.cornerRadius = 15
         completeButton.layer.masksToBounds = true
         
-        tag = 123
-
     }
     
-   
-
+    
+    
 }
 
 extension TabataTimer{
@@ -79,13 +71,6 @@ extension TabataTimer{
         
         viewModel = TabataTimerViewModel(input: (t, p, w, r, completeButton.rx.tap, pauseButton.rx.tap.asObservable() ))
         setUpbinds(viewModel: viewModel!)
-        
-        let win = UIApplication.shared.delegate?.window
-        win!!.addSubview(self)
-        self.snp.makeConstraints({
-            $0.bottom.equalToSuperview()
-            $0.left.right.equalToSuperview()
-        })
         
     }
     

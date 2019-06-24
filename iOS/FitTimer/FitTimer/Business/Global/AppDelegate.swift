@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TheBod
+//  
 //
 //  Created by YYang1 on 11/10/18.
-//  Copyright © 2018 PixelForceSystems. All rights reserved.
+//  
 //
 
 import UIKit
@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         configureThirdServices(launchOptions: launchOptions)
        
-        window = UIWindow(frame: UIScreen.main.bounds)
-
-        
-        window?.makeKeyAndVisible()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        
+//        window?.makeKeyAndVisible()
         
         
         return true
@@ -43,20 +43,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         YYLog("FailToRegisterNotification: \(error.localizedDescription)")
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        YYLog("DidReceiveRemoteNotification \(userInfo)")
-        
-        
-        if (application.applicationState == .active) {
-        }
-        else if (application.applicationState == .inactive) {
-        }
-        else if (application.applicationState == .background) {
-        }
-        completionHandler(.newData);
-
-        
-    }
+//    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+//        YYLog("DidReceiveRemoteNotification \(userInfo)")
+//        
+//        
+//        if (application.applicationState == .active) {
+//        }
+//        else if (application.applicationState == .inactive) {
+//        }
+//        else if (application.applicationState == .background) {
+//        }
+//        completionHandler(.newData);
+//
+//        
+//    }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler(UNNotificationPresentationOptions(rawValue: UNNotificationPresentationOptions.alert.rawValue | UNNotificationPresentationOptions.sound.rawValue | UNNotificationPresentationOptions.badge.rawValue));
