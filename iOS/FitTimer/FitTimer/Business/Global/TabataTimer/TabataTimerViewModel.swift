@@ -11,13 +11,34 @@ import Foundation
 
 class TabataTimerViewModel {
     
-    //round
-    //phase(Prepare, Work, Rest) x perTime
-    //Status(suspended,resumed,none,done)
     enum TabataPhase {
-        case prepare(phaseColor: UIColor, phaseTitle: String)
-        case work(phaseColor: UIColor, phaseTitle: String)
-        case rest(phaseColor: UIColor, phaseTitle: String)
+        case prepare
+        case work
+        case rest
+        
+        var phaseName: String?{
+            switch self {
+            case .prepare:
+                return "PREPARE"
+            case .work:
+                return "ACTIVE"
+            case .rest:
+                return "REST"
+            }
+        }
+        
+        var color: UIColor?{
+            switch self {
+            case .prepare:
+                return .yellow
+            case .work:
+                return .green
+            case .rest:
+                return .red
+            }
+        }
+        
+        
     }
     
     enum TabataStauts: String {
@@ -29,7 +50,7 @@ class TabataTimerViewModel {
     
     typealias PhaseInfo = (timer: String?, phaseColor: UIColor?, round: String?, phaseTitle: String?, tabataStatus: TabataStauts)
     fileprivate var timerStatus = TabataStauts.resumed
-    fileprivate var timerPhase = TabataPhase.prepare(phaseColor: .yellow, phaseTitle: "Prepare")
+    fileprivate var timerPhase = TabataPhase.prepare
     fileprivate var timer: DispatchSourceTimer?
     fileprivate var currentRound: Int
     fileprivate var numberOfRound: Int
@@ -75,7 +96,7 @@ class TabataTimerViewModel {
                 self.startTimer(subject: configureSubject)
             case .done:
                 self.currentRound = 1
-                self.timerPhase = .work(phaseColor: .green, phaseTitle: "Work")
+                self.timerPhase = .work
                 self.timerStatus = .resumed
                 self.startTimer(subject: configureSubject)
             }
@@ -115,31 +136,23 @@ extension TabataTimerViewModel{
         timer?.setEventHandler {
             total -= 1
             DispatchQueue.main.async {
-                YYLog("\(self.timerPhase)-----\(total)")
-                switch self.timerPhase{
-                case .prepare(let color, let title):
-                    subject.onNext((String(total).secStrToMinSec(), color, self.round, title, self.timerStatus))
-                case .work(let color, let title):
-                    subject.onNext((String(total).secStrToMinSec(), color, self.round, title, self.timerStatus))
-                case .rest(let color, let title):
-                    subject.onNext((String(total).secStrToMinSec(), color, self.round, title, self.timerStatus))
-                }
+                subject.onNext((String(total).secStrToMinSec(), self.timerPhase.color, self.round, self.timerPhase.phaseName, self.timerStatus))
             }
             if total <= 0 {
                 self.timer?.cancel()
                 self.timer = nil
                 switch self.timerPhase{
                 case .prepare:
-                    self.timerPhase = .work(phaseColor: .green, phaseTitle: "Work")
+                    self.timerPhase = .work
                     self.startTimer(subject: subject)
                 case .work:
-                    self.timerPhase = .rest(phaseColor: .red, phaseTitle: "Rest")
+                    self.timerPhase = .rest
                     self.startTimer(subject: subject)
                 case .rest:
                     if self.currentRound == self.numberOfRound{
                         self.endTimer(subject: subject)
                     }else{
-                        self.timerPhase = .work(phaseColor: .green, phaseTitle: "Work")
+                        self.timerPhase = .work
                         self.startTimer(subject: subject)
                         self.currentRound += 1
                     }
