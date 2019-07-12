@@ -57,6 +57,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.On
      * installed Google Play services and returned to the app.
      */
     override fun onMapReady(googleMap: GoogleMap) {
+        mMap.setInfoWindowAdapter(BookmarkInfoWindowAdapter(this))
         mMap = googleMap
         getCurrentLocation()
         setGoogleClient()
@@ -185,7 +186,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.On
                     displayPoiDisplayStep(place, image)
                 } else {
                     displayPoiDisplayStep(place, null)
-                } }
+                }
+            }
     }
 
     private fun displayPoiDisplayStep(place: Place, photo: Bitmap?) {
@@ -195,12 +197,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleApiClient.On
         } else {
             BitmapDescriptorFactory.fromBitmap(photo)
         }
-        mMap.addMarker(
+        val marker = mMap.addMarker(
             MarkerOptions()
             .position(place.latLng)
-            .icon(iconPhoto)
             .title(place.name as String?)
             .snippet(place.phoneNumber as String?)
-        ) }
+        )
+
+        marker.tag = photo
+    }
+
+
 
 }
