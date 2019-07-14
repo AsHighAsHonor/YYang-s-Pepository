@@ -1,6 +1,6 @@
 package service
 
-import android.telecom.Call
+import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -11,7 +11,7 @@ interface ItunesService {
     // 1
     @GET("/search?media=podcast")
 
-    fun searchPodcastByTerm(@Query("term") term: String): Call
+    fun searchPodcastByTerm(@Query("term") term: String): Call<PodcastResponse>
 
     // 3
     companion object {
