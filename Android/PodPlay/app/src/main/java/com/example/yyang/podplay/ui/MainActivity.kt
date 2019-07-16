@@ -5,7 +5,6 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.View
 import android.widget.SearchView
@@ -29,15 +28,10 @@ class MainActivity : AppCompatActivity(), PodcastListAdapter.PodcastListAdapterL
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val TAG = javaClass.simpleName
-        val itunesService = ItunesService.instance
-        val podcastCall = itunesService.searchPodcastByTerm("Android Developer")
-        ItunesRepo(itunesService).searchByTerm("Android Developer", {
-            Log.i(TAG, "Results = $it")
-        })
         setupToolbar()
         setupViewModels()
         updateControls()
+        handleIntent(intent)
     }
 
 
