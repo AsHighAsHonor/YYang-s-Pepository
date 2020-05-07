@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">PlaceBook</string>
-    <string name="title_activity_maps">Map</string>
+  <string name="app_name">PlaceBook</string>
+  <string name="title_activity_maps">PlaceBook</string>
+  <string name="open_drawer">Open Drawer</string>
+  <string name="close_drawer">Close Drawer</string>
+  <string name="google_places_key">AIzaSyB2xomtuwoNR91EiCOZyat-odqlvy9UJEw</string>
 </resources>
